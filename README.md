@@ -1,7 +1,5 @@
 # Data Analyst Portfolio
 
-Welcome to my Data Analyst Portfolio! 👋
-
 My name is Valerie Kurniawan, and I am a fifth-semester Information Systems student at Universitas Multimedia Nusantara (UMN), Indonesia. I am part of the 2024 cohort, with an interest in Data Analytics and Business Intelligence.
 
 This repository contains my data analysis projects, academic assignments, and learning activities. Through these projects, I use data analysis tools to explore data, find useful insights, and support better decision-making.
