@@ -1,0 +1,101 @@
+"ID","Transportasi","Belanja_Online","Makanan","Kebiasaan_Tidur","Kepuasan_Kuliah","Fakultas","Jenis_Kelamin","Tahun_Angkatan","Frekuensi_Olahraga","Gaya_Hidup","IPK","Jam_Belajar","Pengeluaran_Makanan","Waktu_Tempuh","Durasi_Olahraga","Mata_Kuliah","Buku_Dibaca","Teman_Sekelas","Kegiatan_Organisasi","Kopi_Per_Hari","Tinggi_Badan","Berat_Badan","Penghasilan_Ortu","Waktu_Tidur","Konsumsi_Air"
+1,"Bus","Kadang-kadang","Flexitarian","Kurang dari 5 jam","Sangat Puas","Pertanian","Perempuan",2020,"Tidak Pernah","Kurang Aktif",0.6,5,1600,40,120,3,4,13,3,4,166.2,41.7,12.5,8.7,2.9
+2,"Jalan Kaki","Sangat Sering","Flexitarian","Kurang dari 5 jam","Puas","Kedokteran","Perempuan",2023,"Sering","Aktif",3.89,14,1750,30,180,3,0,16,4,0,168.2,66.8,8.2,7.7,3.2
+3,"Bus","Kadang-kadang","Flexitarian","Lebih dari 9 jam","Netral","MIPA","Laki-laki",2020,"Sangat Sering","Sedang",1.64,27,1150,55,240,5,4,16,0,1,156.3,77.3,16.7,6.4,2.4
+4,"Mobil","Kadang-kadang","Non-Vegetarian","7-9 jam","Netral","Pertanian","Laki-laki",2022,"Tidak Pernah","Kurang Aktif",1.61,10,1600,25,150,7,0,10,3,2,164.5,62.5,7.1,4.9,3.8
+5,"Mobil","Kadang-kadang","Flexitarian","Kurang dari 5 jam","Sangat Puas","Teknik","Laki-laki",2020,"Kadang-kadang","Sangat Tidak Aktif",2.59,36,2000,45,225,7,0,17,1,4,174.1,51.5,17.2,7.7,3.9
+6,"Jalan Kaki","Sering","Vegetarian","Kurang dari 5 jam","Puas","Ilmu Sosial dan Politik","Perempuan",2022,"Sangat Sering","Aktif",3.67,20,2000,90,300,5,1,19,3,2,157.5,43.7,4.5,7.1,3.4
+7,"Bus","Sangat Sering","Vegetarian","Kurang dari 5 jam","Sangat Puas","Ilmu Sosial dan Politik","Laki-laki",2022,"Tidak Pernah","Aktif",0.87,30,1500,30,180,7,1,16,3,0,161.8,50,17.5,4.3,1.5
+8,"Sepeda","Sangat Sering","Non-Vegetarian","5-7 jam","Puas","Ilmu Sosial dan Politik","Laki-laki",2021,"Sering","Sedang",2.19,20,1300,40,30,6,0,13,2,1,153.5,70.7,3.2,4.3,2.8
+9,"Kereta","Kadang-kadang","Vegetarian","5-7 jam","Puas","MIPA","Laki-laki",2022,"Sangat Sering","Sangat Tidak Aktif",2.88,6,800,115,150,6,2,7,2,4,168.5,53.5,9.8,6.3,3.5
+10,"Jalan Kaki","Jarang","Flexitarian","7-9 jam","Puas","Hukum","Perempuan",2023,"Sering","Kurang Aktif",1.59,38,800,65,150,6,0,7,0,2,169.2,63.4,14.2,4.9,2
+11,"Jalan Kaki","Kadang-kadang","Vegan","5-7 jam","Sangat Tidak Puas","Ekonomi dan Bisnis","Perempuan",2021,"Sangat Sering","Aktif",0.38,18,1100,70,270,5,1,19,1,0,171.5,79.4,5.7,6.5,2.5
+12,"Motor","Kadang-kadang","Vegetarian","7-9 jam","Tidak Puas","Ilmu Budaya","Laki-laki",2020,"Sering","Sedang",2.54,34,1200,55,165,6,2,10,1,1,152.8,68.7,19,8.9,2.9
+13,"Mobil","Kadang-kadang","Vegetarian","Kurang dari 5 jam","Tidak Puas","Hukum","Perempuan",2024,"Sangat Sering","Sangat Tidak Aktif",0.01,32,1050,10,135,7,0,17,3,1,166.1,80.5,8.8,5.1,3.4
+14,"Bus","Sering","Flexitarian","Kurang dari 5 jam","Sangat Tidak Puas","Ekonomi dan Bisnis","Laki-laki",2022,"Kadang-kadang","Aktif",0.84,25,1150,80,285,6,0,13,1,3,155.6,34.5,13.3,7.6,2.3
+15,"Sepeda","Sangat Sering","Flexitarian","Lebih dari 9 jam","Tidak Puas","Teknik","Perempuan",2023,"Sangat Sering","Aktif",2.72,27,1400,75,105,4,1,15,2,3,165,55.8,5.3,4.8,2.3
+16,"Bus","Kadang-kadang","Non-Vegetarian","Kurang dari 5 jam","Sangat Puas","MIPA","Laki-laki",2024,"Sering","Kurang Aktif",3.46,34,1850,40,285,6,3,13,3,2,178.4,61,13.9,6.6,2.6
+17,"Bus","Sering","Vegetarian","Kurang dari 5 jam","Puas","MIPA","Perempuan",2024,"Kadang-kadang","Sangat Tidak Aktif",3.2,29,1400,15,120,5,4,18,2,3,160,68.7,15.2,8.1,2.2
+18,"Motor","Kadang-kadang","Flexitarian","Kurang dari 5 jam","Sangat Puas","Kedokteran","Perempuan",2023,"Tidak Pernah","Kurang Aktif",0.54,10,1700,55,120,3,0,7,0,2,172.2,42.5,10.9,4.6,3.1
+19,"Kereta","Sering","Non-Vegetarian","Lebih dari 9 jam","Puas","Ilmu Budaya","Perempuan",2020,"Sering","Kurang Aktif",1.55,8,1300,110,195,5,4,16,3,3,157.5,72.1,17.6,8.1,1.6
+20,"Motor","Sangat Sering","Vegetarian","7-9 jam","Netral","MIPA","Laki-laki",2020,"Sangat Sering","Kurang Aktif",3.15,7,900,80,150,7,1,18,3,4,160.2,64.6,17,5.2,3
+21,"Motor","Jarang","Vegetarian","Kurang dari 5 jam","Puas","MIPA","Laki-laki",2023,"Kadang-kadang","Kurang Aktif",2.77,14,1100,100,255,7,0,9,4,1,169.4,64,19.7,4.5,2.5
+22,"Sepeda","Sering","Vegetarian","Lebih dari 9 jam","Netral","MIPA","Perempuan",2022,"Kadang-kadang","Sedang",2.38,32,1950,95,60,4,3,11,0,4,158.2,67.6,14,4.8,1.6
+23,"Bus","Sering","Vegan","Kurang dari 5 jam","Sangat Puas","Ekonomi dan Bisnis","Perempuan",2024,"Tidak Pernah","Kurang Aktif",0.5,16,1150,75,60,5,3,6,2,4,148,58.3,13.6,7.3,4
+24,"Mobil","Sering","Vegan","7-9 jam","Tidak Puas","Ekonomi dan Bisnis","Perempuan",2021,"Kadang-kadang","Sedang",2.22,7,1600,115,225,5,2,10,1,4,177.7,73.9,2.8,7.4,3.1
+25,"Mobil","Jarang","Non-Vegetarian","7-9 jam","Puas","Pertanian","Perempuan",2020,"Tidak Pernah","Kurang Aktif",1.8,5,2000,95,45,3,1,12,1,2,168.6,69.7,5.4,4.7,3.6
+26,"Motor","Sering","Vegetarian","Lebih dari 9 jam","Netral","Pertanian","Perempuan",2023,"Kadang-kadang","Sedang",3.06,37,750,100,75,4,3,9,3,2,159.2,57.7,2.6,8.9,2.5
+27,"Jalan Kaki","Sering","Flexitarian","5-7 jam","Sangat Tidak Puas","Ilmu Sosial dan Politik","Laki-laki",2023,"Sering","Kurang Aktif",0.1,40,500,20,30,6,2,17,3,3,145.1,75.6,17.2,4.7,3.9
+28,"Bus","Kadang-kadang","Non-Vegetarian","Kurang dari 5 jam","Sangat Tidak Puas","Hukum","Laki-laki",2023,"Sering","Sedang",0.78,17,1250,60,165,5,2,16,1,2,184,64.4,9.6,8.7,2.4
+29,"Kereta","Kadang-kadang","Flexitarian","Kurang dari 5 jam","Netral","Teknik","Perempuan",2022,"Kadang-kadang","Sedang",3.52,19,1850,105,105,6,1,7,4,4,198.9,70,16.7,7.5,3.5
+30,"Jalan Kaki","Kadang-kadang","Vegan","Kurang dari 5 jam","Puas","Ilmu Budaya","Laki-laki",2021,"Kadang-kadang","Kurang Aktif",0.44,17,850,30,60,4,0,16,4,0,167.1,51.1,4.7,6.8,1.5
+31,"Motor","Sering","Non-Vegetarian","5-7 jam","Sangat Tidak Puas","Ilmu Sosial dan Politik","Perempuan",2021,"Sangat Sering","Sangat Tidak Aktif",3.87,34,700,75,195,6,3,14,0,2,173.5,83.7,9.3,5.2,3.7
+32,"Bus","Sangat Sering","Vegan","Kurang dari 5 jam","Tidak Puas","Ilmu Budaya","Laki-laki",2022,"Sangat Sering","Sedang",1.54,22,2000,95,30,6,4,9,0,0,177.2,59.9,15,5.7,1.7
+33,"Sepeda","Sering","Non-Vegetarian","5-7 jam","Puas","Pertanian","Laki-laki",2024,"Tidak Pernah","Aktif",3.43,30,950,50,195,4,4,8,4,0,158,72.7,3.1,8.2,3.5
+34,"Kereta","Sering","Vegan","Kurang dari 5 jam","Sangat Puas","Ilmu Sosial dan Politik","Laki-laki",2023,"Sangat Sering","Kurang Aktif",3.55,40,900,10,210,3,4,8,2,0,161.5,58.5,7.9,8.6,3
+35,"Mobil","Kadang-kadang","Vegetarian","Lebih dari 9 jam","Tidak Puas","Ekonomi dan Bisnis","Laki-laki",2022,"Kadang-kadang","Aktif",1.96,40,1850,40,285,3,4,17,0,3,147.7,55.8,16,6.6,3.2
+36,"Sepeda","Jarang","Vegetarian","Kurang dari 5 jam","Sangat Puas","Hukum","Laki-laki",2022,"Sering","Kurang Aktif",2.87,7,700,80,30,7,1,16,2,2,157.6,71.8,17.1,8.4,3.3
+37,"Motor","Kadang-kadang","Vegetarian","7-9 jam","Tidak Puas","Teknik","Perempuan",2020,"Kadang-kadang","Sedang",1.95,29,1150,90,150,3,1,11,2,3,171.2,36.2,17.7,7.5,2.2
+38,"Motor","Sangat Sering","Vegetarian","7-9 jam","Sangat Tidak Puas","Ilmu Budaya","Perempuan",2024,"Sering","Sangat Tidak Aktif",3.95,15,1400,35,45,7,4,15,2,1,162.1,67.2,19.2,6.1,3.2
+39,"Mobil","Sangat Sering","Vegan","5-7 jam","Tidak Puas","MIPA","Laki-laki",2024,"Tidak Pernah","Aktif",0.26,34,500,70,60,6,2,20,3,1,162.9,65.9,8.9,5.5,2.2
+40,"Bus","Sangat Sering","Non-Vegetarian","5-7 jam","Puas","Pertanian","Perempuan",2020,"Sangat Sering","Aktif",0.63,20,1250,10,30,3,0,5,0,3,163.9,19.6,19.1,8.8,2.9
+41,"Kereta","Jarang","Vegetarian","Kurang dari 5 jam","Puas","Kedokteran","Laki-laki",2020,"Kadang-kadang","Kurang Aktif",3.14,15,750,35,285,3,1,16,4,1,146.4,65.5,14.7,4.6,1.6
+42,"Sepeda","Sering","Non-Vegetarian","7-9 jam","Tidak Puas","MIPA","Laki-laki",2020,"Sering","Aktif",2.17,36,1850,45,90,5,1,6,2,1,173.4,27.5,9.6,7.4,2.4
+43,"Sepeda","Sering","Vegetarian","Lebih dari 9 jam","Netral","Pertanian","Laki-laki",2024,"Tidak Pernah","Sedang",1.67,35,1450,55,165,7,4,9,4,2,150.6,69.9,9,8.1,2.7
+44,"Bus","Sangat Sering","Vegan","Kurang dari 5 jam","Sangat Tidak Puas","Ilmu Budaya","Perempuan",2024,"Sangat Sering","Kurang Aktif",4,6,850,15,180,7,4,7,3,1,162.9,53.2,5.8,5.1,2.8
+45,"Jalan Kaki","Sangat Sering","Vegan","Kurang dari 5 jam","Puas","Kedokteran","Laki-laki",2023,"Kadang-kadang","Sangat Tidak Aktif",1.02,26,1700,110,300,3,0,17,0,3,160.6,49.6,15.5,7,3.5
+46,"Motor","Kadang-kadang","Vegetarian","5-7 jam","Netral","Pertanian","Laki-laki",2021,"Sering","Sangat Tidak Aktif",2.03,21,1150,95,255,3,0,11,4,2,162.8,59.9,10,4.8,2.8
+47,"Mobil","Sangat Sering","Flexitarian","Kurang dari 5 jam","Netral","Teknik","Laki-laki",2021,"Kadang-kadang","Sangat Tidak Aktif",0.32,9,2000,30,240,5,1,18,3,1,179.6,80.6,10.2,6,3.6
+48,"Sepeda","Jarang","Non-Vegetarian","5-7 jam","Netral","Ilmu Sosial dan Politik","Laki-laki",2023,"Tidak Pernah","Kurang Aktif",3.25,19,1150,20,120,3,1,12,0,0,159.2,50.5,3.5,5.2,3
+49,"Sepeda","Sering","Vegan","5-7 jam","Sangat Puas","Kedokteran","Perempuan",2021,"Sering","Sangat Tidak Aktif",1.53,36,1700,35,255,3,1,9,3,0,157.2,68.4,8.6,6.6,2.8
+50,"Kereta","Jarang","Vegetarian","5-7 jam","Sangat Puas","Ilmu Budaya","Laki-laki",2020,"Sering","Sedang",3.21,39,850,115,285,5,2,11,0,4,149.8,65.1,18.1,7.4,3.1
+51,"Sepeda","Sering","Vegan","5-7 jam","Netral","Kedokteran","Perempuan",2022,"Sangat Sering","Sedang",0.79,31,1000,60,300,5,2,20,0,1,156.9,42.3,11.8,8.5,2.2
+52,"Mobil","Kadang-kadang","Non-Vegetarian","Lebih dari 9 jam","Tidak Puas","Teknik","Perempuan",2024,"Sangat Sering","Sedang",3.79,26,1600,50,75,4,4,16,3,1,153.3,33.9,2.6,5.7,2.9
+53,"Motor","Kadang-kadang","Flexitarian","Lebih dari 9 jam","Tidak Puas","Hukum","Perempuan",2022,"Sering","Kurang Aktif",1.38,29,1450,115,300,3,0,15,2,0,169.1,30.1,9,5.2,4
+54,"Motor","Jarang","Flexitarian","Lebih dari 9 jam","Sangat Tidak Puas","Ilmu Sosial dan Politik","Laki-laki",2020,"Tidak Pernah","Sangat Tidak Aktif",2.09,19,1650,105,60,7,2,7,0,2,156.4,68.3,4,5.5,3.8
+55,"Bus","Sering","Vegetarian","Lebih dari 9 jam","Puas","Ilmu Budaya","Laki-laki",2021,"Sangat Sering","Kurang Aktif",0.45,39,700,80,45,6,1,10,1,3,168,59.5,7,5.1,3.4
+56,"Motor","Kadang-kadang","Flexitarian","7-9 jam","Puas","Kedokteran","Laki-laki",2023,"Sering","Kurang Aktif",3.54,34,1150,95,210,7,4,12,4,1,163.5,87.8,15,4.6,3.6
+57,"Jalan Kaki","Sangat Sering","Vegetarian","Lebih dari 9 jam","Tidak Puas","Ekonomi dan Bisnis","Perempuan",2023,"Kadang-kadang","Sedang",3.82,38,500,40,75,4,0,14,0,1,150.7,68.6,8.8,5.3,3.8
+58,"Sepeda","Jarang","Vegetarian","7-9 jam","Puas","MIPA","Perempuan",2020,"Kadang-kadang","Sangat Tidak Aktif",0.16,9,500,50,105,7,2,16,3,4,157.1,72.7,13.4,8.6,3
+59,"Motor","Sering","Vegetarian","7-9 jam","Sangat Puas","Pertanian","Laki-laki",2024,"Kadang-kadang","Aktif",1.97,9,700,75,60,3,1,17,1,1,173.9,80,10.9,4.3,2.4
+60,"Mobil","Sangat Sering","Vegetarian","7-9 jam","Tidak Puas","Ilmu Budaya","Perempuan",2020,"Sering","Kurang Aktif",0.9,11,600,60,135,5,3,10,1,2,174,52.5,16.5,6.5,3.4
+61,"Kereta","Sangat Sering","Vegan","Kurang dari 5 jam","Netral","MIPA","Laki-laki",2023,"Tidak Pernah","Kurang Aktif",3.44,6,650,105,90,3,0,14,1,4,185.1,67.7,12.5,8,2.7
+62,"Kereta","Sering","Non-Vegetarian","7-9 jam","Sangat Puas","Ilmu Budaya","Perempuan",2022,"Tidak Pernah","Kurang Aktif",2.12,20,600,90,90,3,0,12,2,2,165,73,5.1,8.2,1.5
+63,"Jalan Kaki","Sering","Non-Vegetarian","7-9 jam","Sangat Tidak Puas","Ilmu Sosial dan Politik","Laki-laki",2023,"Kadang-kadang","Kurang Aktif",0.02,27,1150,65,300,7,2,14,1,2,150,80.5,18.9,6.9,3.2
+64,"Jalan Kaki","Sangat Sering","Non-Vegetarian","7-9 jam","Netral","Ekonomi dan Bisnis","Perempuan",2024,"Kadang-kadang","Kurang Aktif",1.11,27,1350,65,195,4,1,10,4,1,157.3,71.4,3,5.2,2.5
+65,"Bus","Jarang","Vegan","Lebih dari 9 jam","Tidak Puas","Ilmu Sosial dan Politik","Perempuan",2024,"Sangat Sering","Kurang Aktif",1.3,28,950,100,120,3,0,15,0,2,169.1,66.3,3.6,6.9,3.9
+66,"Jalan Kaki","Sangat Sering","Vegetarian","5-7 jam","Puas","Ilmu Sosial dan Politik","Perempuan",2023,"Sering","Sangat Tidak Aktif",2.35,25,1050,70,225,4,1,7,0,2,184,47,17.1,4.7,1.8
+67,"Jalan Kaki","Kadang-kadang","Non-Vegetarian","7-9 jam","Sangat Tidak Puas","Teknik","Perempuan",2022,"Kadang-kadang","Sangat Tidak Aktif",1,22,1250,65,270,5,2,17,1,0,166.1,70.9,9.6,6.4,2.4
+68,"Motor","Kadang-kadang","Non-Vegetarian","7-9 jam","Sangat Tidak Puas","Ilmu Budaya","Perempuan",2022,"Kadang-kadang","Aktif",0.17,23,600,35,45,3,1,18,2,0,176.4,67.5,14.9,4.5,3.7
+69,"Jalan Kaki","Sangat Sering","Vegetarian","7-9 jam","Puas","Hukum","Perempuan",2021,"Tidak Pernah","Aktif",0.44,13,1750,20,270,7,3,11,3,4,172.7,69.5,15.3,5.5,3.5
+70,"Mobil","Jarang","Non-Vegetarian","Kurang dari 5 jam","Puas","MIPA","Perempuan",2024,"Sering","Sangat Tidak Aktif",2.82,23,1050,65,180,4,3,5,1,2,153.3,66.4,19.8,7.4,2.8
+71,"Motor","Sangat Sering","Vegetarian","Kurang dari 5 jam","Puas","Kedokteran","Perempuan",2024,"Tidak Pernah","Aktif",3.76,23,1850,65,225,4,1,10,3,1,163.3,57,19.3,5,1.5
+72,"Mobil","Sangat Sering","Vegetarian","7-9 jam","Sangat Puas","Kedokteran","Laki-laki",2020,"Sering","Aktif",1.24,9,700,60,135,3,0,9,3,3,178.1,58.8,4.6,6,2.1
+73,"Kereta","Kadang-kadang","Non-Vegetarian","5-7 jam","Netral","Hukum","Laki-laki",2022,"Sering","Aktif",0.31,20,1100,100,30,5,1,6,0,4,173.8,70.3,14,8,2.3
+74,"Sepeda","Sering","Vegan","7-9 jam","Tidak Puas","Ilmu Budaya","Perempuan",2021,"Sering","Sedang",1.29,36,850,60,45,3,2,11,2,0,169.6,62.6,2.6,5.1,3.2
+75,"Sepeda","Sangat Sering","Vegetarian","5-7 jam","Netral","Ilmu Sosial dan Politik","Laki-laki",2022,"Sering","Aktif",2.5,19,1300,25,165,6,3,20,2,4,169.8,47.5,10.9,4.4,1.7
+76,"Jalan Kaki","Sangat Sering","Vegan","Kurang dari 5 jam","Netral","Ekonomi dan Bisnis","Laki-laki",2023,"Kadang-kadang","Sedang",1.76,30,700,115,45,3,4,7,3,2,160.1,55.6,16.2,7.9,3.9
+77,"Bus","Sangat Sering","Flexitarian","Lebih dari 9 jam","Netral","Pertanian","Perempuan",2021,"Kadang-kadang","Sedang",3.21,24,1400,60,105,6,2,7,1,4,151.8,40.2,8.8,7.4,3.7
+78,"Motor","Sering","Vegetarian","5-7 jam","Tidak Puas","Kedokteran","Laki-laki",2024,"Sangat Sering","Sangat Tidak Aktif",1.12,39,750,15,210,4,2,8,1,1,178,45.5,19.1,6.6,2.2
+79,"Kereta","Jarang","Non-Vegetarian","5-7 jam","Tidak Puas","MIPA","Laki-laki",2022,"Sangat Sering","Sangat Tidak Aktif",2.28,35,550,40,195,5,1,17,0,0,150.8,57.8,13.9,5.1,2.6
+80,"Jalan Kaki","Sangat Sering","Vegetarian","5-7 jam","Netral","Hukum","Perempuan",2022,"Sangat Sering","Sangat Tidak Aktif",0.17,28,1300,35,60,5,2,5,1,4,155.6,33,9.8,4.9,2.4
+81,"Motor","Sangat Sering","Flexitarian","Lebih dari 9 jam","Tidak Puas","Ekonomi dan Bisnis","Perempuan",2021,"Tidak Pernah","Sangat Tidak Aktif",0.76,21,1600,40,135,7,3,10,0,3,171.3,34.7,17.1,7.1,2.4
+82,"Jalan Kaki","Sangat Sering","Non-Vegetarian","Kurang dari 5 jam","Puas","Ilmu Budaya","Laki-laki",2021,"Tidak Pernah","Sangat Tidak Aktif",2.91,11,1300,25,30,3,0,20,2,1,152.4,76.5,16.5,4.2,2.3
+83,"Motor","Kadang-kadang","Non-Vegetarian","Lebih dari 9 jam","Netral","Ilmu Sosial dan Politik","Laki-laki",2023,"Sangat Sering","Kurang Aktif",3.31,17,850,120,225,5,2,9,1,2,159.5,51.4,9.7,5.1,3.8
+84,"Bus","Jarang","Non-Vegetarian","Kurang dari 5 jam","Tidak Puas","Ilmu Sosial dan Politik","Laki-laki",2021,"Sangat Sering","Sangat Tidak Aktif",2.04,39,1400,85,180,3,1,6,2,2,153.2,32.2,7.9,8.1,2.2
+85,"Jalan Kaki","Kadang-kadang","Vegan","Kurang dari 5 jam","Puas","MIPA","Laki-laki",2020,"Sangat Sering","Kurang Aktif",2.27,17,1350,25,180,6,0,11,0,3,171.2,58.3,12.2,5.5,3.7
+86,"Kereta","Sering","Vegetarian","7-9 jam","Sangat Puas","Teknik","Laki-laki",2023,"Sering","Aktif",0,18,1750,50,135,5,4,14,0,1,169.5,79.8,17.5,4.1,3.5
+87,"Motor","Sangat Sering","Vegetarian","7-9 jam","Netral","MIPA","Laki-laki",2020,"Kadang-kadang","Sedang",0.58,8,1950,30,270,3,3,5,0,3,169.2,69.9,12.5,8.8,2
+88,"Jalan Kaki","Sering","Flexitarian","Kurang dari 5 jam","Tidak Puas","Pertanian","Perempuan",2024,"Tidak Pernah","Sedang",3.46,29,1400,85,75,5,4,19,4,0,169.4,66.6,13.6,4.4,2.1
+89,"Jalan Kaki","Jarang","Vegetarian","Kurang dari 5 jam","Sangat Puas","Ilmu Sosial dan Politik","Perempuan",2021,"Kadang-kadang","Aktif",0.33,33,700,60,195,3,1,9,0,2,170.6,77.8,15.8,7.7,3.2
+90,"Bus","Sering","Vegetarian","7-9 jam","Sangat Puas","Ekonomi dan Bisnis","Perempuan",2024,"Kadang-kadang","Sangat Tidak Aktif",0.98,20,1900,85,240,5,1,9,0,0,171.4,48.4,14.5,8.2,2.7
+91,"Jalan Kaki","Sangat Sering","Flexitarian","Kurang dari 5 jam","Tidak Puas","Ilmu Sosial dan Politik","Perempuan",2021,"Sangat Sering","Kurang Aktif",3.93,13,1900,50,225,6,0,20,3,2,145.3,70.9,17.6,4.1,1.8
+92,"Sepeda","Kadang-kadang","Vegan","7-9 jam","Tidak Puas","Pertanian","Laki-laki",2021,"Kadang-kadang","Kurang Aktif",2.31,26,1150,100,300,3,2,15,2,1,163.5,51.2,3.7,8.3,1.9
+93,"Bus","Jarang","Vegetarian","Lebih dari 9 jam","Sangat Tidak Puas","Ilmu Sosial dan Politik","Perempuan",2022,"Sangat Sering","Sangat Tidak Aktif",0.99,26,1050,80,180,3,2,17,1,0,166.1,60,13,6.8,2.3
+94,"Jalan Kaki","Jarang","Non-Vegetarian","5-7 jam","Sangat Puas","Teknik","Laki-laki",2021,"Tidak Pernah","Sedang",2.46,28,1650,60,270,4,4,12,1,3,172.2,93.2,6.3,5.7,3
+95,"Mobil","Kadang-kadang","Vegetarian","Kurang dari 5 jam","Tidak Puas","MIPA","Perempuan",2022,"Sering","Aktif",0.13,18,500,90,105,7,2,7,3,2,153.1,74.5,10.5,5.6,3.9
+96,"Sepeda","Sering","Non-Vegetarian","Kurang dari 5 jam","Sangat Tidak Puas","Ekonomi dan Bisnis","Laki-laki",2022,"Sering","Sangat Tidak Aktif",0.59,34,1250,50,195,4,2,5,0,1,160,71.5,7.1,7.2,2.6
+97,"Sepeda","Jarang","Flexitarian","7-9 jam","Netral","Ekonomi dan Bisnis","Laki-laki",2020,"Kadang-kadang","Kurang Aktif",2.81,35,1950,80,300,7,3,8,0,2,154.3,43.4,18.5,4.6,3.8
+98,"Bus","Kadang-kadang","Non-Vegetarian","Lebih dari 9 jam","Puas","Pertanian","Laki-laki",2020,"Kadang-kadang","Sedang",0.26,12,1950,65,270,5,2,12,3,3,175.6,48.2,9.2,5.6,1.7
+99,"Mobil","Kadang-kadang","Vegetarian","5-7 jam","Sangat Tidak Puas","Pertanian","Perempuan",2024,"Kadang-kadang","Aktif",2.49,18,1350,100,105,4,2,6,0,0,177.8,94.3,12.2,6.9,3.7
+100,"Mobil","Jarang","Vegetarian","7-9 jam","Tidak Puas","Ekonomi dan Bisnis","Perempuan",2020,"Tidak Pernah","Kurang Aktif",3.75,5,1450,105,90,6,0,8,0,4,172.9,43.6,3.5,7.8,2.2

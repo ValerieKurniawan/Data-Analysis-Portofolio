@@ -1,0 +1,701 @@
+---
+title: "00000108382_IS240_AL_MideTerm"
+author: "00000108382_ValerieKurniawan"
+date: "2025-03-27"
+output: word_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(readr)
+library(ggplot2)
+
+data_mahasiswa <- read_csv("takehome-data_mahasiswa.csv", show_col_types = FALSE)
+```
+
+1. Question 1: Variable identification, SUB-CLO031-1, Weight (16.67%)
+•	Perform a statistical analysis using the data_mahasiswa dataset
+```{r}
+head(data_mahasiswa)
+```
+
+•	Identify at least three categorical variables. Explain why these three variables are classified as categorical!
+Kategorikal merupakan tipe data yang berupa kalimat atau kata-kata yang mendeskripsikan suatu hal (kualitatif). Mereka tidak dapat dijadikan tolak ukur karena nilai-nilai di dalamnya tidak memiliki hubungan matematis antara 1 sama lain. Contoh: buah (apel, mangga, pisang). 
+-	Transportasi 
+-	Belanja_Online
+-	Makanan	
+-	Kepuasan_Kuliah
+-	Fakultas
+-	Jenis Kelamin
+-	Frekuensi_Olahraga
+-	Gaya_Hidup
+
+•	Identify at least three numeric variables. Explain why these three variables are classified as numeric!
+Numerik merupakan tipe data yang berupa angka (kuantitatif). Mereka dapat di hitung atau sebagai tolak ukur, sehingga ada operasi matematikanya dan hubungan antar 1 sama lain. Numerik dibagi menjadi 2 jenis, terdiri dari:
+a)	Discrete: tipe numerik yang terbatas dengan bilangan bulat. Contoh: jumlah mahasiswa UMN jurusan Sistem Informasi kelas A berjumlahkan 37.
+o	ID
+o	Tahun Angkatan
+o	Jam Belajar
+o	Pengeluaran Makanan
+o	Waktu Tempuh 
+o	Durasi Olahraga
+o	Mata Kuliah
+o	Buku Dibaca
+o	Teman Sekelas
+o	Kopi Per Hari
+
+b)	Continuous: tipe numerik yang tidak terbatas dengan bilangan decimal atau pecahan. Contoh: tinggi badan seorang mahasiswa SI adalah 175.8 cm.
+o	IPK
+o	Tinggi Badan
+o	Berat Badan
+o	Penghasilan Ortu
+o	Waktu Tidur
+o	Konsumsi Air
+
+•	From the six selected variables, determine their measurement scale (nominal, ordinal, interval, and ratio). Provide explanations for each!
+a)	Nominal: bagian dari kategorikal yang dimana juga tidak ada yang bisa diurutkan, dijadikan operasi matematika di dalamnya
+o	Transportasi
+o	Makanan
+o	Fakultas
+o	Jenis Kelamin
+
+b)	Ordinal: variable yang dapat diurutkan saja, baik tipe data dari kategorikal atau numerik
+o	ID
+o	Belanja Online
+o	Kebiasaan Tidur
+o	Kepuasaan Kuliah
+o	Tahun Angkatan
+o	Frekuensi Olahraga
+o	Gaya Hidup
+
+c)	Interval: variable dalam bentuk numerik yang dapat dihitung, dengan nilai “0” memiliki makna/arti
+
+d)	Ratio: sama seperti interval, tapi nilai “0” yang berarti tidak ada
+o	IPK
+o	Jam Belajar
+o	Pengeluaran Makanan
+o	Waktu Tempuh
+o	Durasi Olahraga
+o	Mata Kuliah
+o	Buku Dibaca
+o	Teman Sekelas
+o	Kegiatan Organisasi
+o	Kopi per Hari
+o	Tinggi Badan
+o	Berat Badan
+o	Penghasilan Ortu
+o	Waktu Tidur
+o	Konsumsi Air
+
+
+
+
+2.	Question 2: Descriptive Statistical Analysis, SUB-CLO022-2, Weight (30%)
+•	Determine the mode, median, and mean for the numeric variables selected in the previous question. 
+```{r}
+
+Jam_Belajar <- data_mahasiswa$Jam_Belajar
+
+# 1. Mean (Average)
+mean_Jam_Belajar <- mean(Jam_Belajar, na.rm = TRUE)  
+
+# 2. Median
+median_Jam_Belajar <- median(Jam_Belajar, na.rm = TRUE)  
+
+# 3. Mode
+mode_Jam_Belajar <- function(x) {
+  uniq_x <- unique(x)
+  uniq_x[which.max(tabulate(match(x, uniq_x)))]
+}
+mode_Jam_Belajar <- mode_Jam_Belajar(Jam_Belajar)  
+
+print(list("Mean" = mean_Jam_Belajar, "Median" = median_Jam_Belajar, "Mode" = mode_Jam_Belajar))
+```
+
+```{r}
+Pengeluaran_Makanan <- data_mahasiswa$Pengeluaran_Makanan
+
+# 1. Mean (Average)
+mean_Pengeluaran_Makanan <- mean(Pengeluaran_Makanan, na.rm = TRUE)  
+
+# 2. Median
+median_Pengeluaran_Makanan <- median(Pengeluaran_Makanan, na.rm = TRUE)  
+
+# 3. Mode
+mode_Pengeluaran_Makanan <- function(x) {
+  uniq_x <- unique(x)
+  uniq_x[which.max(tabulate(match(x, uniq_x)))]
+}
+mode_Pengeluaran_Makanan <- mode_Pengeluaran_Makanan(Pengeluaran_Makanan)  
+
+print(list("Mean" = mean_Pengeluaran_Makanan, "Median" = median_Pengeluaran_Makanan, "Mode" = mode_Pengeluaran_Makanan))
+```
+
+```{r}
+data_mahasiswa <- read_csv("takehome-data_mahasiswa.csv", show_col_types = FALSE)
+
+# 1. Waktu_Tempuh
+Waktu_Tempuh <- data_mahasiswa$Waktu_Tempuh
+
+# 1. Mean (Average)
+mean_Waktu_Tempuh <- mean(Waktu_Tempuh, na.rm = TRUE)
+
+# 2. Median
+median_Waktu_Tempuh <- median(Waktu_Tempuh, na.rm = TRUE)
+
+# 3. Mode
+mode_Waktu_Tempuh <- function(x) {
+  uniq_x <- unique(x)
+  uniq_x[which.max(tabulate(match(x, uniq_x)))]
+}
+mode_Waktu_Tempuh <- mode_Waktu_Tempuh(Waktu_Tempuh)
+
+print(list("Mean" = mean_Waktu_Tempuh, "Median" = median_Waktu_Tempuh, "Mode" = mode_Waktu_Tempuh))
+```
+
+```{r}
+Durasi_Olahraga <- data_mahasiswa$Durasi_Olahraga
+
+# 1. Mean (Average)
+mean_Durasi_Olahraga <- mean(Durasi_Olahraga, na.rm = TRUE)
+
+# 2. Median
+median_Durasi_Olahraga <- median(Durasi_Olahraga, na.rm = TRUE)
+
+# 3. Mode
+mode_Durasi_Olahraga <- function(x) {
+  uniq_x <- unique(x)
+  uniq_x[which.max(tabulate(match(x, uniq_x)))]
+}
+mode_Durasi_Olahraga <- mode_Durasi_Olahraga(Durasi_Olahraga)
+
+print(list("Mean" = mean_Durasi_Olahraga, "Median" = median_Durasi_Olahraga, "Mode" = mode_Durasi_Olahraga))
+```
+```{r}
+Mata_Kuliah <- data_mahasiswa$Mata_Kuliah
+
+# 1. Mean (Average)
+mean_Mata_Kuliah <- mean(Mata_Kuliah, na.rm = TRUE)
+
+# 2. Median
+median_Mata_Kuliah <- median(Mata_Kuliah, na.rm = TRUE)
+
+# 3. Mode
+mode_Mata_Kuliah <- function(x) {
+  uniq_x <- unique(x)
+  uniq_x[which.max(tabulate(match(x, uniq_x)))]
+}
+mode_Mata_Kuliah <- mode_Mata_Kuliah(Mata_Kuliah)
+
+print(list("Mean" = mean_Mata_Kuliah, "Median" = median_Mata_Kuliah, "Mode" = mode_Mata_Kuliah))
+```
+
+```{r}
+Buku_Dibaca <- data_mahasiswa$Buku_Dibaca
+
+# 1. Mean (Average)
+mean_Buku_Dibaca <- mean(Buku_Dibaca, na.rm = TRUE)
+
+# 2. Median
+median_Buku_Dibaca <- median(Buku_Dibaca, na.rm = TRUE)
+
+# 3. Mode
+mode_Buku_Dibaca <- function(x) {
+  uniq_x <- unique(x)
+  uniq_x[which.max(tabulate(match(x, uniq_x)))]
+}
+mode_Buku_Dibaca <- mode_Buku_Dibaca(Buku_Dibaca)
+
+print(list("Mean" = mean_Buku_Dibaca, "Median" = median_Buku_Dibaca, "Mode" = mode_Buku_Dibaca))
+```
+
+```{r}
+Teman_Sekelas <- data_mahasiswa$Teman_Sekelas
+
+# 1. Mean (Average)
+mean_Teman_Sekelas <- mean(Teman_Sekelas, na.rm = TRUE)
+
+# 2. Median
+median_Teman_Sekelas <- median(Teman_Sekelas, na.rm = TRUE)
+
+# 3. Mode
+mode_Teman_Sekelas <- function(x) {
+  uniq_x <- unique(x)
+  uniq_x[which.max(tabulate(match(x, uniq_x)))]
+}
+mode_Teman_Sekelas <- mode_Teman_Sekelas(Teman_Sekelas)
+
+print(list("Mean" = mean_Teman_Sekelas, "Median" = median_Teman_Sekelas, "Mode" = mode_Teman_Sekelas))
+```
+
+```{r}
+Kopi_Per_Hari <- data_mahasiswa$Kopi_Per_Hari
+
+# 1. Mean (Average)
+mean_Kopi_Per_Hari <- mean(Kopi_Per_Hari, na.rm = TRUE)
+
+# 2. Median
+median_Kopi_Per_Hari <- median(Kopi_Per_Hari, na.rm = TRUE)
+
+# 3. Mode
+mode_Kopi_Per_Hari <- function(x) {
+  uniq_x <- unique(x)
+  uniq_x[which.max(tabulate(match(x, uniq_x)))]
+}
+mode_Kopi_Per_Hari <- mode_Kopi_Per_Hari(Kopi_Per_Hari)
+
+print(list("Mean" = mean_Kopi_Per_Hari, "Median" = median_Kopi_Per_Hari, "Mode" = mode_Kopi_Per_Hari))
+
+```
+
+```{r}
+IPK <- data_mahasiswa$IPK
+
+# 1. Mean (Average)
+mean_IPK <- mean(IPK, na.rm = TRUE)
+
+# 2. Median
+median_IPK <- median(IPK, na.rm = TRUE)
+
+# 3. Mode
+mode_IPK <- function(x) {
+  uniq_x <- unique(x)
+  uniq_x[which.max(tabulate(match(x, uniq_x)))]
+}
+mode_IPK <- mode_IPK(IPK)
+
+print(list("Mean" = mean_IPK, "Median" = median_IPK, "Mode" = mode_IPK))
+```
+
+```{r}
+Tinggi_Badan <- data_mahasiswa$Tinggi_Badan
+
+# 1. Mean (Average)
+mean_Tinggi_Badan <- mean(Tinggi_Badan, na.rm = TRUE)
+
+# 2. Median
+median_Tinggi_Badan <- median(Tinggi_Badan, na.rm = TRUE)
+
+# 3. Mode
+mode_Tinggi_Badan <- function(x) {
+  uniq_x <- unique(x)
+  uniq_x[which.max(tabulate(match(x, uniq_x)))]
+}
+mode_Tinggi_Badan <- mode_Tinggi_Badan(Tinggi_Badan)
+
+print(list("Mean" = mean_Tinggi_Badan, "Median" = median_Tinggi_Badan, "Mode" = mode_Tinggi_Badan))
+```
+
+```{r}
+Berat_Badan <- data_mahasiswa$Berat_Badan
+
+# 1. Mean (Average)
+mean_Berat_Badan <- mean(Berat_Badan, na.rm = TRUE)
+
+# 2. Median
+median_Berat_Badan <- median(Berat_Badan, na.rm = TRUE)
+
+# 3. Mode
+mode_Berat_Badan <- function(x) {
+  uniq_x <- unique(x)
+  uniq_x[which.max(tabulate(match(x, uniq_x)))]
+}
+mode_Berat_Badan <- mode_Berat_Badan(Berat_Badan)
+
+print(list("Mean" = mean_Berat_Badan, "Median" = median_Berat_Badan, "Mode" = mode_Berat_Badan))
+
+```
+
+```{r}
+Penghasilan_Ortu <- data_mahasiswa$Penghasilan_Ortu
+
+# 1. Mean (Average)
+mean_Penghasilan_Ortu <- mean(Penghasilan_Ortu, na.rm = TRUE)
+
+# 2. Median
+median_Penghasilan_Ortu <- median(Penghasilan_Ortu, na.rm = TRUE)
+
+# 3. Mode
+mode_Penghasilan_Ortu <- function(x) {
+  uniq_x <- unique(x)
+  uniq_x[which.max(tabulate(match(x, uniq_x)))]
+}
+mode_Penghasilan_Ortu <- mode_Penghasilan_Ortu(Penghasilan_Ortu)
+
+print(list("Mean" = mean_Penghasilan_Ortu, "Median" = median_Penghasilan_Ortu, "Mode" = mode_Penghasilan_Ortu))
+
+```
+•	Create appropriate visualizations using suitable charts for the categorical variables selected in the previous question
+```{r}
+ggplot(data_mahasiswa) +
+  aes(x = Transportasi, fill = Transportasi) +  
+  geom_bar() + 
+  geom_text(stat = 'count', aes(label = ..count..), vjust = -0.5) +  
+  scale_fill_brewer(palette = "Set3") +  
+  theme_minimal() +  
+  labs(title = "Jumlah Mahasiswa berdasarkan Penggunaan Transportasi",
+       x = "Transportasi",
+       y = "Jumlah Mahasiswa") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) 
+```
+```{r}
+ggplot(data_mahasiswa) +
+  aes(x = Makanan, fill = Makanan) +  
+  geom_bar() + 
+  geom_text(stat = 'count', aes(label = ..count..), vjust = -0.5) +  
+  scale_fill_brewer(palette = "Set3") +  
+  theme_minimal() +  
+  labs(title = "Jenis Makanan",
+       x = "Makanan",
+       y = "Jumlah Mahasiswa Pemakan") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) 
+```
+
+```{r}
+ggplot(data_mahasiswa) +
+  aes(x = Fakultas, fill = Fakultas) +  
+  geom_bar() + 
+  geom_text(stat = 'count', aes(label = ..count..), vjust = -0.5) +  
+  scale_fill_brewer(palette = "Set3") +  
+  theme_minimal() +  
+  labs(title = "Distribusi Mahasiswa berdasarkan Fakultas",
+       x = "Fakultas",
+       y = "Jumlah Mahasiswa") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) 
+```
+
+```{r}
+ggplot(data_mahasiswa) +
+  aes(x = Jenis_Kelamin, fill = Jenis_Kelamin) +  
+  geom_bar() + 
+  geom_text(stat = 'count', aes(label = ..count..), vjust = -0.5) +  
+  scale_fill_brewer(palette = "Set3") +  
+  theme_minimal() +  
+  labs(title = "Jumlah Mahasiswa berdasarkan Jenis Kelamin",
+       x = "Jenis Kelamin",
+       y = "Jumlah Mahasiswa") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) 
+```
+
+```{r}
+ggplot(data_mahasiswa) +
+  aes(x = Belanja_Online, fill = Belanja_Online) +  
+  geom_bar() + 
+  geom_text(stat = 'count', aes(label = ..count..), vjust = -0.5) +  
+  scale_fill_brewer(palette = "Set3") +  
+  theme_minimal() +  
+  labs(title = "Seberapa Sering Mahasiswa Melakukan Belanja Online",
+       x = "Belanja Online",
+       y = "Jumlah Mahasiswa") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) 
+```
+
+```{r}
+ggplot(data_mahasiswa) +
+  aes(x = Kebiasaan_Tidur, fill = Kebiasaan_Tidur) +  
+  geom_bar() + 
+  geom_text(stat = 'count', aes(label = ..count..), vjust = -0.5) +  
+  scale_fill_brewer(palette = "Set3") +  
+  theme_minimal() +  
+  labs(title = "Seberapa Lama Mahasiswa Tidur",
+       x = "Waktu Tidur",
+       y = "Jumlah Mahasiswa") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) 
+```
+
+```{r}
+ggplot(data_mahasiswa) +
+  aes(x = Kepuasan_Kuliah, fill = Kepuasan_Kuliah) +  
+  geom_bar() + 
+  geom_text(stat = 'count', aes(label = ..count..), vjust = -0.5) +  
+  scale_fill_brewer(palette = "Set3") +  
+  theme_minimal() +  
+  labs(title = "Seberapa Puasa Mahasiswa Kuliah",
+       x = "Tingkat Kepuasaan",
+       y = "Jumlah Mahasiswa") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) 
+```
+
+
+```{r}
+ggplot(data_mahasiswa) +
+  aes(x = Frekuensi_Olahraga, fill = Frekuensi_Olahraga) +  
+  geom_bar() + 
+  geom_text(stat = 'count', aes(label = ..count..), vjust = -0.5) +  
+  scale_fill_brewer(palette = "Set3") +  
+  theme_minimal() +  
+  labs(title = "Seberapa Sering Mahasiswa Olahraga",
+       x = "Tingkat Kebiasaan",
+       y = "Jumlah Mahasiswa") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) 
+```
+
+```{r}
+ggplot(data_mahasiswa) +
+  aes(x = Gaya_Hidup, fill = Gaya_Hidup) +  
+  geom_bar() + 
+  geom_text(stat = 'count', aes(label = ..count..), vjust = -0.5) +  
+  scale_fill_brewer(palette = "Set3") +  
+  theme_minimal() +  
+  labs(title = "Seberapa Aktif Mahasiswa",
+       x = "Tingkat Keaktifan",
+       y = "Jumlah Mahasiswa") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) 
+```
+3.	Question 3: Inferential Statistical Analysis of Categorical Data, SUB-CLO032-3, Weight (10%)
+•	Select at least three categorical variables. Design hypothesis testing for each variable using the Chi-square Goodness of Fit Test (one hypothesis test per variable, for a total of three hypothesis tests). Explain the objective and conclusion of each hypothesis test. 
+```{r}
+one_way_table_Transportasi <- table(data_mahasiswa$Transportasi)
+print("One-Way Contingency Table for Transportasi:")
+print(one_way_table_Transportasi)
+cat("\n\n\n")
+chi_square_one_way_Transportasi <- chisq.test(one_way_table_Transportasi)
+print("Chi-Square Test for One-Way Contingency Table of Transportasi:")
+print(chi_square_one_way_Transportasi)
+```
+```{r}
+one_way_table_BelanjaOnline <- table(data_mahasiswa$Belanja_Online)
+print("One-Way Contingency Table for Belanja Online:")
+print(one_way_table_BelanjaOnline)
+cat("\n\n\n")
+chi_square_one_way_BelanjaOnline <- chisq.test(one_way_table_BelanjaOnline)
+print("Chi-Square Test for One-Way Contingency Table of Belanja Online:")
+print(chi_square_one_way_BelanjaOnline)
+```
+```{r}
+one_way_table_Makanan <- table(data_mahasiswa$Makanan)
+print("One-Way Contingency Table for Makanan:")
+print(one_way_table_Makanan)
+cat("\n\n\n")
+chi_square_one_way_Makanan <- chisq.test(one_way_table_Makanan)
+print("Chi-Square Test for One-Way Contingency Table of Makanan:")
+print(chi_square_one_way_Makanan)
+```
+
+```{r}
+one_way_table_KepuasanKuliah <- table(data_mahasiswa$Kepuasan_Kuliah)
+print("One-Way Contingency Table for Kepuasan Kuliah:")
+print(one_way_table_KepuasanKuliah)
+cat("\n\n\n")
+chi_square_one_way_KepuasanKuliah <- chisq.test(one_way_table_KepuasanKuliah)
+print("Chi-Square Test for One-Way Contingency Table of Kepuasan Kuliah:")
+print(chi_square_one_way_KepuasanKuliah)
+```
+
+```{r}
+one_way_table_Fakultas <- table(data_mahasiswa$Fakultas)
+print("One-Way Contingency Table for Fakultas:")
+print(one_way_table_Fakultas)
+cat("\n\n\n")
+chi_square_one_way_Fakultas <- chisq.test(one_way_table_Fakultas)
+print("Chi-Square Test for One-Way Contingency Table of Fakultas:")
+print(chi_square_one_way_Fakultas)
+```
+
+```{r}
+one_way_table_JenisKelamin <- table(data_mahasiswa$Jenis_Kelamin)
+print("One-Way Contingency Table for Jenis Kelamin:")
+print(one_way_table_JenisKelamin)
+cat("\n\n\n")
+chi_square_one_way_JenisKelamin <- chisq.test(one_way_table_JenisKelamin)
+print("Chi-Square Test for One-Way Contingency Table of Jenis Kelamin:")
+print(chi_square_one_way_JenisKelamin)
+```
+
+```{r}
+one_way_table_FrekuensiOlahraga <- table(data_mahasiswa$Frekuensi_Olahraga)
+print("One-Way Contingency Table for Frekuensi Olahraga:")
+print(one_way_table_FrekuensiOlahraga)
+cat("\n\n\n")
+chi_square_one_way_FrekuensiOlahraga <- chisq.test(one_way_table_FrekuensiOlahraga)
+print("Chi-Square Test for One-Way Contingency Table of Frekuensi Olahraga:")
+print(chi_square_one_way_FrekuensiOlahraga)
+```
+
+```{r}
+one_way_table_GayaHidup <- table(data_mahasiswa$Gaya_Hidup)
+print("One-Way Contingency Table for Gaya Hidup:")
+print(one_way_table_GayaHidup)
+cat("\n\n\n")
+chi_square_one_way_GayaHidup <- chisq.test(one_way_table_GayaHidup)
+print("Chi-Square Test for One-Way Contingency Table of Gaya Hidup:")
+print(chi_square_one_way_GayaHidup)
+```
+•	Select at least three pairs of categorical variables (total of six categorical variables in pairs). Identify the independent and dependent variables, and conduct hypothesis testing for each pair using the Chi-square Test of Independence (one hypothesis test per variable pair, for a total of three hypothesis tests). Explain the objective and conclusion of each hypothesis test.
+```{r}
+two_way_table <- table(data_mahasiswa$Transportasi, data_mahasiswa$Fakultas)
+print("Two-Way Contingency Table for 'Transportasi' and 'Fakultas':")
+print(two_way_table)
+
+cat("\n\n\n")
+
+row_proportions <- prop.table(two_way_table, margin = 1)
+print("Two-Way Table with Row Proportions:")
+print(row_proportions)
+
+cat("\n\n\n")
+
+chi_square_two_way <- chisq.test(two_way_table)
+print("Chi-Square Test for Two-Way Contingency Table:")
+print(chi_square_two_way)
+```
+
+```{r}
+two_way_table <- table(data_mahasiswa$Jenis_Kelamin, data_mahasiswa$Frekuensi_Olahraga)
+print("Two-Way Contingency Table for 'Jenis Kelamin' and 'Frekuensi Olahraga':")
+print(two_way_table)
+
+cat("\n\n\n")
+
+row_proportions <- prop.table(two_way_table, margin = 1)
+print("Two-Way Table with Row Proportions:")
+print(row_proportions)
+
+cat("\n\n\n")
+
+chi_square_two_way <- chisq.test(two_way_table)
+print("Chi-Square Test for Two-Way Contingency Table:")
+print(chi_square_two_way)
+```
+
+```{r}
+two_way_table <- table(data_mahasiswa$Jenis_Kelamin, data_mahasiswa$Gaya_Hidup)
+print("Two-Way Contingency Table for 'Jenis Kelamin' and 'Gaya Hidup':")
+print(two_way_table)
+
+cat("\n\n\n")
+
+row_proportions <- prop.table(two_way_table, margin = 1)
+print("Two-Way Table with Row Proportions:")
+print(row_proportions)
+
+cat("\n\n\n")
+
+chi_square_two_way <- chisq.test(two_way_table)
+print("Chi-Square Test for Two-Way Contingency Table:")
+print(chi_square_two_way)
+```
+
+```{r}
+two_way_table <- table(data_mahasiswa$Kebiasaan_Tidur, data_mahasiswa$Fakultas)
+print("Two-Way Contingency Table for 'Kebiasaan Tidur' and 'Fakultas':")
+print(two_way_table)
+
+cat("\n\n\n")
+
+row_proportions <- prop.table(two_way_table, margin = 1)
+print("Two-Way Table with Row Proportions:")
+print(row_proportions)
+
+cat("\n\n\n")
+
+chi_square_two_way <- chisq.test(two_way_table)
+print("Chi-Square Test for Two-Way Contingency Table:")
+print(chi_square_two_way)
+```
+```{r}
+two_way_table <- table(data_mahasiswa$Kepuasan_Kuliah, data_mahasiswa$Tahun_Angkatan)
+print("Two-Way Contingency Table for 'Kepuasan Kuliah' and 'Tahun Angkatan':")
+print(two_way_table)
+
+cat("\n\n\n")
+
+row_proportions <- prop.table(two_way_table, margin = 1)
+print("Two-Way Table with Row Proportions:")
+print(row_proportions)
+
+cat("\n\n\n")
+
+chi_square_two_way <- chisq.test(two_way_table)
+print("Chi-Square Test for Two-Way Contingency Table:")
+print(chi_square_two_way)
+```
+
+4.	Question 4: Probability Distribution Analysis, SUB-CLO032-4, Weight (20%)
+•	Perform a normality hypothesis test on at least three variables. Explain the objective and conclusion.
+
+```{r}
+shapiro.test(data_mahasiswa$IPK)  
+cat("\n\n")
+shapiro.test(data_mahasiswa$Jam_Belajar)  
+cat("\n\n")
+shapiro.test(data_mahasiswa$Pengeluaran_Makanan) 
+cat("\n\n")
+shapiro.test(data_mahasiswa$Waktu_Tempuh)  
+cat("\n\n")
+shapiro.test(data_mahasiswa$Durasi_Olahraga)
+cat("\n\n")
+shapiro.test(data_mahasiswa$Mata_Kuliah)
+cat("\n\n")
+shapiro.test(data_mahasiswa$Buku_Dibaca)
+cat("\n\n")
+shapiro.test(data_mahasiswa$Teman_Sekelas)
+cat("\n\n")
+shapiro.test(data_mahasiswa$Kegiatan_Organisasi)
+cat("\n\n")
+shapiro.test(data_mahasiswa$Kopi_Per_Hari)
+cat("\n\n")
+shapiro.test(data_mahasiswa$Tinggi_Badan)
+cat("\n\n")
+shapiro.test(data_mahasiswa$Berat_Badan)
+cat("\n\n")
+shapiro.test(data_mahasiswa$Penghasilan_Ortu)
+cat("\n\n")
+shapiro.test(data_mahasiswa$Waktu_Tidur)
+cat("\n\n")
+shapiro.test(data_mahasiswa$Konsumsi_Air)
+cat("\n\n")
+```
+
+
+5.	Question 5: Research Instrument Testing, SUB-CLO033-5, Weight (23.33%%)
+•	Use the data_survei dataset. Conduct a reliability test on the survey results. Explain the conclusion!
+```{r}
+data_survei <- read_csv("takehome-data_survei.csv", show_col_types = FALSE)
+
+alpha(data_survei)
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
