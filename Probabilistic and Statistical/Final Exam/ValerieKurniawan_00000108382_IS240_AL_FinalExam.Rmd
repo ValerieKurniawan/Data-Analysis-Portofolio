@@ -1,0 +1,1034 @@
+---
+title: "The Influence of Cinema Ticket Prices on the Number of  Cinema Audiences in Indonesia"
+author: "Group07"
+date: "2025-05-13"
+output:
+  pdf_document: default
+  word_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r}
+# Load necessary libraries
+if (!require('psych')) install.packages('psych')
+library(psych)
+library(readr)
+library(dplyr)
+library(ggplot2)
+```
+```{r}
+# Reading the data
+electability_data <- read_csv("sample_cinema_121.csv", show_col_types = FALSE)  
+```
+
+```{r}
+# Total responden kuesioner
+cat("Total responden:", nrow(electability_data), "\n\n")
+```
+```{r}
+colnames(electability_data)
+```
+# 1. I am satisfied with the current cinema ticket price
+```{r}
+#Histogramnya
+
+cat("Distribution For: I am satisfied with the current cinema ticket price\n")
+table(electability_data$`1. I am satisfied with the current cinema ticket price`) %>% print()
+cat("\n")
+
+ggplot(electability_data, aes(x = `1. I am satisfied with the current cinema ticket price`)) +
+  geom_bar(fill = "steelblue") +
+  labs(
+    title = "1. I am satisfied with the current cinema ticket price",
+    x = "Response",
+    y = "Jumlah Responden"
+  ) +
+  theme_minimal()
+```
+
+# 2. I believe the current pricing for a cinema ticket is reasonable and affordable than other entertainment options (e.g., streaming services, concert, etc.)
+```{r}
+#Histogramnya
+
+cat("Distribusi untuk: I believe the current pricing for a cinema ticket is reasonable and affordable than other entertainment options\n")
+table(electability_data$`2. I believe the current pricing for a cinema ticket is reasonable and affordable than other entertainment options (e.g., streaming services, concert, etc.)`) %>% print()
+cat("\n")
+
+ggplot(electability_data, aes(x = `2. I believe the current pricing for a cinema ticket is reasonable and affordable than other entertainment options (e.g., streaming services, concert, etc.)`)) +
+  geom_bar(fill = "steelblue") +
+  labs(
+    title = "2. I believe the current pricing for a cinema ticket is reasonable and affordable than other entertainment options (e.g., streaming services, concert, etc.)",
+    x = "Response",
+    y = "Jumlah Responden"
+  ) +
+  theme_minimal()
+```
+
+# 3. I am willing to pay for flexible ticket pricing (cheaper prices on weekdays)
+```{r}
+#Histogramnya
+
+cat("Distribusi untuk: I am willing to pay for flexible ticket pricing (cheaper prices on weekdays)\n")
+table(electability_data$`3. I am willing to pay for flexible ticket pricing (cheaper prices on weekdays)`) %>% print()
+cat("\n")
+
+ggplot(electability_data, aes(x = `3. I am willing to pay for flexible ticket pricing (cheaper prices on weekdays)`)) +
+  geom_bar(fill = "steelblue") +
+  labs(
+    title = "3. I am willing to pay for flexible ticket pricing (cheaper prices on weekdays)",
+    x = "Response",
+    y = "Jumlah Responden"
+  ) +
+  theme_minimal()
+```
+
+# 4. I have visited the cinema more than once in the past 3 months
+```{r}
+#Histogramnya
+
+cat("Distribusi untuk: I have visited the cinema more than once in the past 3 months\n")
+table(electability_data$`4. I have visited the cinema more than once in the past 3 months`) %>% print()
+cat("\n")
+
+ggplot(electability_data, aes(x = `4. I have visited the cinema more than once in the past 3 months`)) +
+  geom_bar(fill = "steelblue") +
+  labs(
+    title = "4. I have visited the cinema more than once in the past 3 months",
+    x = "Response",
+    y = "Jumlah Responden"
+  ) +
+  theme_minimal()
+```
+
+# 5. I will visit the cinema more frequently if the ticket prices are reduced by 20%
+```{r}
+#Histogramnya
+
+cat("Distribusi untuk: I will visit the cinema more frequently if the ticket prices are reduced by 20%\n")
+table(electability_data$`5. I will visit the cinema more frequently if the ticket prices are reduced by 20%`) %>% print()
+cat("\n")
+
+ggplot(electability_data, aes(x = `5. I will visit the cinema more frequently if the ticket prices are reduced by 20%`)) +
+  geom_bar(fill = "steelblue") +
+  labs(
+    title = "5. I will visit the cinema more frequently if the ticket prices are reduced by 20%",
+    x = "Response",
+    y = "Jumlah Responden"
+  ) +
+  theme_minimal()
+```
+
+# 6. I prefer regular cinema tickets compared to premium/special event tickets
+```{r}
+#Histogramnya
+
+cat("Distribusi untuk: I prefer regular cinema tickets compared to premium/special event tickets\n")
+table(electability_data$`6. I prefer regular cinema tickets compared to premium/special event tickets`) %>% print()
+cat("\n")
+
+ggplot(electability_data, aes(x = `6. I prefer regular cinema tickets compared to premium/special event tickets`)) +
+  geom_bar(fill = "steelblue") +
+  labs(
+    title = "6. I prefer regular cinema tickets compared to premium/special event tickets",
+    x = "Response",
+    y = "Jumlah Responden"
+  ) +
+  theme_minimal()
+```
+
+# 7. I am willing to pay a higher price for a ticket with premium benefits (e.g., luxury seating, exclusive screening)
+```{r}
+#Histogramnya
+
+cat("Distribusi untuk: I am willing to pay a higher price for a ticket with premium benefits\n")
+table(electability_data$`7. I am willing to pay a higher price for a ticket with premium benefits (e.g., luxury seating, exclusive screening)`) %>% print()
+cat("\n")
+
+ggplot(electability_data, aes(x = `7. I am willing to pay a higher price for a ticket with premium benefits (e.g., luxury seating, exclusive screening)`)) +
+  geom_bar(fill = "steelblue") +
+  labs(
+    title = "7. I am willing to pay a higher price for a ticket with premium benefits (e.g., luxury seating, exclusive screening)",
+    x = "Response",
+    y = "Jumlah Responden"
+  ) +
+  theme_minimal()
+```
+
+# 8. I visit cinemas in urban areas
+```{r}
+#Histogramnya
+
+cat("Distribusi untuk: I visit cinemas in urban areas\n")
+table(electability_data$`8. I visit cinemas in urban areas`) %>% print()
+cat("\n")
+
+ggplot(electability_data, aes(x = `8. I visit cinemas in urban areas`)) +
+  geom_bar(fill = "steelblue") +
+  labs(
+    title = "8. I visit cinemas in urban areas",
+    x = "Response",
+    y = "Jumlah Responden"
+  ) +
+  theme_minimal()
+```
+
+# 9. I am willing to spend outside of my entertainment budget for a special screening
+```{r}
+#Histogramnya
+
+cat("Distribusi untuk: I am willing to spend outside of my entertainment budget for a special screening\n")
+table(electability_data$`9. I am willing to spend outside of my entertainment budget for a special screening`) %>% print()
+cat("\n")
+
+ggplot(electability_data, aes(x = `9. I am willing to spend outside of my entertainment budget for a special screening`)) +
+  geom_bar(fill = "steelblue") +
+  labs(
+    title = "9. I am willing to spend outside of my entertainment budget for a special screening",
+    x = "Response",
+    y = "Jumlah Responden"
+  ) +
+  theme_minimal()
+```
+
+# 10. I allocate some money for my entertainment activities for each month
+```{r}
+#Histogramnya
+
+cat("Distribusi untuk: I allocate some money for my entertainment activities for each month\n")
+table(electability_data$`10. I allocate some money for my entertainment activities for each month`) %>% print()
+cat("\n")
+
+ggplot(electability_data, aes(x = `10. I allocate some money for my entertainment activities for each month`)) +
+  geom_bar(fill = "steelblue") +
+  labs(
+    title = "10. I allocate some money for my entertainment activities for each month",
+    x = "Response",
+    y = "Jumlah Responden"
+  ) +
+  theme_minimal()
+```
+
+# 11. I allocate my budget for entertainment activities
+```{r}
+#Histogramnya
+
+cat("Distribusi untuk: I allocate my budget for entertainment activities\n")
+table(electability_data$`11. I allocate my budget for entertainment activities`) %>% print()
+cat("\n")
+
+ggplot(electability_data, aes(x = `11. I allocate my budget for entertainment activities`)) +
+  geom_bar(fill = "steelblue") +
+  labs(
+    title = "11. I allocate my budget for entertainment activities",
+    x = "Response",
+    y = "Jumlah Responden"
+  ) +
+  theme_minimal()
+```
+
+# 12. I prefer going to cinema on the weekdays
+```{r}
+#Histogramnya
+
+cat("Distribusi untuk: I prefer going to cinema on the weekdays\n")
+table(electability_data$`12. I prefer going to cinema on the weekdays`) %>% print()
+cat("\n")
+
+ggplot(electability_data, aes(x = `12. I prefer going to cinema on the weekdays`)) +
+  geom_bar(fill = "steelblue") +
+  labs(
+    title = "12. I prefer going to cinema on the weekdays",
+    x = "Response",
+    y = "Jumlah Responden"
+  ) +
+  theme_minimal()
+```
+
+# 13. I prefer going to cinema on the weekends
+```{r}
+#Histogramnya
+
+cat("Distribusi untuk: I prefer going to cinema on the weekends\n")
+table(electability_data$`13. I prefer going to cinema on the weekends`) %>% print()
+cat("\n")
+
+ggplot(electability_data, aes(x = `13. I prefer going to cinema on the weekends`)) +
+  geom_bar(fill = "steelblue") +
+  labs(
+    title = "13. I prefer going to cinema on the weekends",
+    x = "Response",
+    y = "Jumlah Responden"
+  ) +
+  theme_minimal()
+```
+
+# 14. I frequently watch movies in the cinema on any day of the week
+```{r}
+#Histogramnya
+
+cat("Distribusi untuk: I frequently watch movies in the cinema on any day of the week\n")
+table(electability_data$`14. I frequently watch movies in the cinema on any day of the week`) %>% print()
+cat("\n")
+
+ggplot(electability_data, aes(x = `14. I frequently watch movies in the cinema on any day of the week`)) +
+  geom_bar(fill = "steelblue") +
+  labs(
+    title = "14. I frequently watch movies in the cinema on any day of the week",
+    x = "Response",
+    y = "Jumlah Responden"
+  ) +
+  theme_minimal()
+```
+
+# 15. I usually watch movies at cinemas in
+```{r}
+#Histogramnya
+
+cat("Distribusi untuk: I usually watch movies at cinemas in\n")
+table(electability_data$`15. I usually watch movies at cinemas in`) %>% print()
+cat("\n")
+
+ggplot(electability_data, aes(x = `15. I usually watch movies at cinemas in`)) +
+  geom_bar(fill = "steelblue") +
+  labs(
+    title = "15. I usually watch movies at cinemas in",
+    x = "Response",
+    y = "Jumlah Responden"
+  ) +
+  theme_minimal()
+```
+
+
+```{r}
+#Uji cronbach alpha
+
+# Install packagenya kalo belum ada
+if (!require(psych)) install.packages("psych", dependencies = TRUE)
+
+# Load packagenya
+library(psych)
+
+data <- read_csv("sample_cinema_121.csv", show_col_types = FALSE) 
+
+# Ambil hanya kolom item 1-10, 12, dan 13 (kategorikal & skala likert)
+# Subset data
+item_data <- data[, c(7:16, 18, 19)]
+
+# Konversi ke numerik
+item_data[] <- lapply(item_data, function(x) as.numeric(as.character(x)))
+
+# Ganti nama kolomnya jadi Q1 sampai Q13
+colnames(item_data) <- paste0("Q", 1:12)
+
+# Q1 = 1. I am satisfied with the current cinema ticket price
+# Q2 = 2. I believe the current pricing for a cinema ticket is reasonable and affordable than other entertainment options (e.g., streaming services, concert, etc.)
+# Q3 = 3. I am willing to pay for flexible ticket pricing (cheaper prices on weekdays)
+# Q4 = 4. I have visited the cinema more than once in the past 3 months
+# Q5 = 5. I will visit the cinema more frequently if the ticket prices are reduced by 20%
+# Q6 = 6. I prefer regular cinema tickets compared to premium/special event tickets
+# Q7 = 7. I am willing to pay a higher price for a ticket with premium benefits (e.g., luxury seating, exclusive screening)
+# Q8 = 8. I visit cinemas in urban areas
+# Q9 = 9. I am willing to spend outside of my entertainment budget for a special screening
+# Q10 = 10. I allocate some money for my entertainment activities for each month
+# Q11 = 12. I prefer going to cinema on the weekdays
+# Q12 = 13. I prefer going to cinema on the weekends
+
+# Hapus baris yang mengandung NA/Not Available (kalo ada)
+item_data <- na.omit(item_data)
+
+# Hitung nilai Cronbach's Alphanya
+result <- psych::alpha(item_data)
+
+# Print nilai Cronbach's Alphanya
+cat("Cronbach's Alpha:", round(result$total$raw_alpha, 3), "\n\n")
+```
+
+```{r}
+#Modus (Uji Statistika Deskriptif)
+
+# Load the necessary library
+library(readr)
+library(dplyr)
+
+# Load datasetnya
+data <- read_csv("sample_cinema_121.csv", show_col_types = FALSE)
+
+# Fungsi untuk menghitung modusnya
+get_mode <- function(v) {
+  uniqv <- unique(v)
+  uniqv[which.max(tabulate(match(v, uniqv)))]
+}
+
+# Ambil semua kolom pernyataan 1 sampai 15 (kolom ke-7 sampai ke-21)
+question_data <- data[, 7:21]
+
+# Hitung modus untuk setiap kolomnya
+modes <- sapply(question_data, get_mode)
+
+# Tampilkan hasilnya
+for (i in seq_along(modes)) {
+  cat(names(modes)[i], ":", modes[[i]], "\n")
+}
+```
+
+```{r}
+#Uji Chi-Square per pernyataan
+
+# Load library
+library(readr)
+
+# Definisi kelompok kolomn berdasarkan kategorinya
+ticket_price_cols <- c(
+  "1. I am satisfied with the current cinema ticket price",
+  "2. I believe the current pricing for a cinema ticket is reasonable and affordable than other entertainment options (e.g., streaming services, concert, etc.)",
+  "3. I am willing to pay for flexible ticket pricing (cheaper prices on weekdays)"
+)
+
+audience_freq_cols <- c(
+  "4. I have visited the cinema more than once in the past 3 months",
+  "5. I will visit the cinema more frequently if the ticket prices are reduced by 20%"
+)
+
+ticket_type_cols <- c(
+  "6. I prefer regular cinema tickets compared to premium/special event tickets",
+  "7. I am willing to pay a higher price for a ticket with premium benefits (e.g., luxury seating, exclusive screening)"
+)
+
+location_cols <- c(
+  "8. I visit cinemas in urban areas",
+  "15. I usually watch movies at cinemas in"
+)
+
+budget_cols <- c(
+  "9. I am willing to spend outside of my entertainment budget for a special screening",
+  "10. I allocate some money for my entertainment activities for each month",
+  "11. I allocate my budget for entertainment activities"
+)
+
+day_cols <- c(
+  "12. I prefer going to cinema on the weekdays",
+  "13. I prefer going to cinema on the weekends",
+  "14. I frequently watch movies in the cinema on any day of the week"
+)
+
+# Fungsi buat uji chi-square antar dua variabel
+run_chisq_tests <- function(group_x, group_y, data) {
+  for (x in group_x) {
+    for (y in group_y) {
+      # Buat tabel kontingensi
+      tbl <- table(data[[x]], data[[y]])
+      # Hanya lakukan uji jika tabel valid
+      if (all(dim(tbl) > 1)) {
+        test <- suppressWarnings(chisq.test(tbl))
+        cat("\nChi-Square Test:", "\n")
+        cat("X:", x, "\n")
+        cat("Y:", y, "\n")
+        cat("p-value:", test$p.value, "\n")
+        cat("--------------------------------------------------\n")
+      }
+    }
+  }
+}
+
+# Jalanin perbandingan semua pernyataan dari masing-masing variabel dibanding Audience Frequency
+cat("=== Ticket Price vs Audience Frequency ===\n")
+run_chisq_tests(ticket_price_cols, audience_freq_cols, data)
+
+cat("\n=== Location vs Audience Frequency ===\n")
+run_chisq_tests(location_cols, audience_freq_cols, data)
+
+cat("\n=== Ticket Type vs Audience Frequency ===\n")
+run_chisq_tests(ticket_type_cols, audience_freq_cols, data)
+
+cat("\n=== Day vs Audience Frequency ===\n")
+run_chisq_tests(day_cols, audience_freq_cols, data)
+
+cat("\n=== Budget vs Audience Frequency ===\n")
+run_chisq_tests(budget_cols, audience_freq_cols, data)
+```
+
+```{r}
+#Uji Chi-Square per variabel
+
+# Load library
+library(readr)
+
+# Definisi kelompok kolom berdasarkan kategorinya
+ticket_price_cols <- c(
+  "1. I am satisfied with the current cinema ticket price",
+  "2. I believe the current pricing for a cinema ticket is reasonable and affordable than other entertainment options (e.g., streaming services, concert, etc.)",
+  "3. I am willing to pay for flexible ticket pricing (cheaper prices on weekdays)"
+)
+
+audience_freq_cols <- c(
+  "4. I have visited the cinema more than once in the past 3 months",
+  "5. I will visit the cinema more frequently if the ticket prices are reduced by 20%"
+)
+
+ticket_type_cols <- c(
+  "6. I prefer regular cinema tickets compared to premium/special event tickets",
+  "7. I am willing to pay a higher price for a ticket with premium benefits (e.g., luxury seating, exclusive screening)"
+)
+
+location_cols <- c(
+  "8. I visit cinemas in urban areas",
+  "15. I usually watch movies at cinemas in"
+)
+
+budget_cols <- c(
+  "9. I am willing to spend outside of my entertainment budget for a special screening",
+  "10. I allocate some money for my entertainment activities for each month",
+  "11. I allocate my budget for entertainment activities"
+)
+
+day_cols <- c(
+  "12. I prefer going to cinema on the weekdays",
+  "13. I prefer going to cinema on the weekends",
+  "14. I frequently watch movies in the cinema on any day of the week"
+)
+
+# Fungsi buat variabel gabungan dari beberapa kolom
+combine_columns <- function(data, cols) {
+  apply(data[, cols], 1, function(row) paste(row, collapse = "_"))
+}
+
+# Gabungin pernyataan-pernyataan per kategorinya
+data$ticket_price_combo <- combine_columns(data, ticket_price_cols)
+data$audience_freq_combo <- combine_columns(data, audience_freq_cols)
+data$ticket_type_combo <- combine_columns(data, ticket_type_cols)
+data$location_combo <- combine_columns(data, location_cols)
+data$budget_combo <- combine_columns(data, budget_cols)
+data$day_combo <- combine_columns(data, day_cols)
+
+# Fungsi buat uji chi square antar dua variabel yang udah di gabung
+run_combined_chisq <- function(x, y, x_label, y_label) {
+  tbl <- table(x, y)
+  if (all(dim(tbl) > 1)) {
+    test <- suppressWarnings(chisq.test(tbl))
+    cat("\nChi-Square Test (Combined Variables):", "\n")
+    cat("X:", x_label, "\n")
+    cat("Y:", y_label, "\n")
+    cat("p-value:", test$p.value, "\n")
+    cat("--------------------------------------------------\n")
+  }
+}
+
+# Jalanin perbandingan semua tipe variabel dibanding Audience Frequency
+run_combined_chisq(data$ticket_price_combo, data$audience_freq_combo, "Ticket Price", "Audience Frequency")
+run_combined_chisq(data$location_combo, data$audience_freq_combo, "Location", "Audience Frequency")
+run_combined_chisq(data$ticket_type_combo, data$audience_freq_combo, "Ticket Type", "Audience Frequency")
+run_combined_chisq(data$day_combo, data$audience_freq_combo, "Day", "Audience Frequency")
+run_combined_chisq(data$budget_combo, data$audience_freq_combo, "Budget", "Audience Frequency")
+```
+
+```{r}
+#Uji Spearman
+
+
+# Ubah nama kolom jadi singkat 
+colnames(data) <- c("respondent_id",         # Kolom 1: ID Responden (tidak digunakan dalam analisis)
+                    "age",                   # Kolom 2: Umur
+                    "gender",                # Kolom 3: Jenis Kelamin
+                    "education",             # Kolom 4: Pendidikan
+                    "income",                # Kolom 5: Pendapatan
+                    "region",                # Kolom 6: Wilayah
+                    "satisfaction",          # Kolom 7: Kepuasan dengan harga tiket
+                    "reasonablePricing",    # Kolom 8: Harga tiket dianggap wajar dan terjangkau dibandingkan opsi hiburan lain
+                    "flexiblePricing",      # Kolom 9: Kesediaan membayar untuk harga tiket fleksibel (misal harga lebih murah pada hari kerja)
+                    "cinemaVisits3months", # Kolom 10: Jumlah kunjungan ke bioskop dalam 3 bulan terakhir
+                    "priceReductionVisit", # Kolom 11: Kesediaan untuk lebih sering pergi ke bioskop jika harga tiket turun 20%
+                    "regularTicketPreference", # Kolom 12: Preferensi terhadap tiket biasa dibandingkan tiket premium
+                    "premiumTicketWillingness", # Kolom 13: Kesediaan membayar lebih untuk tiket premium dengan manfaat tambahan
+                    "urbanCinemaVisits",   # Kolom 14: Kunjungan ke bioskop di daerah perkotaan
+                    "specialScreeningWillingness", # Kolom 15: Kesediaan mengeluarkan uang lebih untuk menonton pemutaran spesial
+                    "monthlyEntertainmentBudget", # Kolom 16: Anggaran untuk hiburan bulanan
+                    "budgetAllocation",     # Kolom 17: Alokasi anggaran untuk kegiatan hiburan
+                    "weekdayPreference",    # Kolom 18: Preferensi untuk pergi ke bioskop pada hari kerja
+                    "weekendPreference",    # Kolom 19: Preferensi untuk pergi ke bioskop pada akhir pekan
+                    "weeklyCinemaVisits",  # Kolom 20: Jumlah kunjungan ke bioskop per minggu
+                    "cinemaLocation"        # Kolom 21: Lokasi bioskop (perkotaaan atau daerah lain)
+)
+
+# Saring kolom numerik (kolom data ke 7-16, 18, 19) ([nya])
+numerical_data <- data[, c(7:16, 18, 19)]
+
+# Saring kolom kategorikal (kolom data ke 11, 14, 15) ([nya])
+categorical_data <- data[, c(11, 14, 15)]
+
+# Konversi kolom kategorikal jadi faktor 
+categorical_data <- lapply(categorical_data, as.factor)
+```
+
+```{r}
+# Uji Korelasi Spearman antara Variabel Numerik
+
+
+# Pilih kolom numerik untuk korelasi (kolom data ke 7-16, 18, 19) ([nya])
+numerical_data <- data[, c("satisfaction", "reasonablePricing", "flexiblePricing", "cinemaVisits3months", 
+                           "priceReductionVisit", "regularTicketPreference", "premiumTicketWillingness", 
+                           "urbanCinemaVisits", "specialScreeningWillingness", "monthlyEntertainmentBudget", 
+                           "weekdayPreference", "weekendPreference")]
+
+# Fungsi buat hitung korelasi Spearman antar variabel numerik 
+spearman_numerical_correlation_manual <- function(numerical_data, pairs) {
+  results <- list()
+  
+  # Hitung korelasi buat setiap pasangan kolom yang udah didefinisi
+  for (pair in pairs) {
+    num_col1 <- pair[1]
+    num_col2 <- pair[2]
+    
+    # Hitung korelasi Spearman antara dua variabel numerik
+    spearman_result <- suppressWarnings(cor.test(numerical_data[[num_col1]], 
+                                                 numerical_data[[num_col2]], 
+                                                 method = "spearman", use = "complete.obs"))
+    
+    # Periksa signifikan atau tidak hubungan berdasarkan p-value nya
+    significant <- ifelse(spearman_result$p.value < 0.05, "There is significant relationship", "There is no significant relationship")
+    
+    results[[paste(num_col1, num_col2, sep = "_")]] <- list(
+      rho = spearman_result$estimate, 
+      p_value = spearman_result$p.value, 
+      significant = significant
+    )
+  }
+  
+  return(results)
+}
+
+# Definisi pasangan kolom berdasarkan variabel
+
+# Grouping berdasarkan variabel "satisfaction"
+pairs_satisfaction <- list(
+  c("satisfaction", "reasonablePricing"),
+  c("satisfaction", "flexiblePricing"),
+  c("satisfaction", "cinemaVisits3months"),
+  c("satisfaction", "priceReductionVisit"),
+  c("satisfaction", "regularTicketPreference"),
+  c("satisfaction", "premiumTicketWillingness"),
+  c("satisfaction", "urbanCinemaVisits"),
+  c("satisfaction", "specialScreeningWillingness"),
+  c("satisfaction", "monthlyEntertainmentBudget"),
+  c("satisfaction", "weekdayPreference"),
+  c("satisfaction", "weekendPreference")
+)
+
+# Grouping berdasarkan variabel "reasonablePricing"
+pairs_reasonablePricing <- list(
+  c("reasonablePricing", "flexiblePricing"),
+  c("reasonablePricing", "cinemaVisits3months"),
+  c("reasonablePricing", "priceReductionVisit"),
+  c("reasonablePricing", "regularTicketPreference"),
+  c("reasonablePricing", "premiumTicketWillingness"),
+  c("reasonablePricing", "urbanCinemaVisits"),
+  c("reasonablePricing", "specialScreeningWillingness"),
+  c("reasonablePricing", "monthlyEntertainmentBudget"),
+  c("reasonablePricing", "weekdayPreference"),
+  c("reasonablePricing", "weekendPreference")
+)
+
+# Grouping berdasarkan variabel "flexiblePricing"
+pairs_flexiblePricing <- list(
+  c("flexiblePricing", "cinemaVisits3months"),
+  c("flexiblePricing", "priceReductionVisit"),
+  c("flexiblePricing", "regularTicketPreference"),
+  c("flexiblePricing", "premiumTicketWillingness"),
+  c("flexiblePricing", "urbanCinemaVisits"),
+  c("flexiblePricing", "specialScreeningWillingness"),
+  c("flexiblePricing", "monthlyEntertainmentBudget"),
+  c("flexiblePricing", "weekdayPreference"),
+  c("flexiblePricing", "weekendPreference")
+)
+
+# Grouping berdasarkan variabel "cinemaVisits3months"
+pairs_cinemaVisits3months <- list(
+  c("cinemaVisits3months", "priceReductionVisit"),
+  c("cinemaVisits3months", "regularTicketPreference"),
+  c("cinemaVisits3months", "premiumTicketWillingness"),
+  c("cinemaVisits3months", "urbanCinemaVisits"),
+  c("cinemaVisits3months", "specialScreeningWillingness"),
+  c("cinemaVisits3months", "monthlyEntertainmentBudget"),
+  c("cinemaVisits3months", "weekdayPreference"),
+  c("cinemaVisits3months", "weekendPreference")
+)
+
+# Grouping berdasarkan variabel "priceReductionVisit"
+pairs_priceReductionVisit <- list(
+  c("priceReductionVisit", "regularTicketPreference"),
+  c("priceReductionVisit", "premiumTicketWillingness"),
+  c("priceReductionVisit", "urbanCinemaVisits"),
+  c("priceReductionVisit", "specialScreeningWillingness"),
+  c("priceReductionVisit", "monthlyEntertainmentBudget"),
+  c("priceReductionVisit", "weekdayPreference"),
+  c("priceReductionVisit", "weekendPreference")
+)
+
+# Grouping berdasarkan variabel "regularTicketPreference"
+pairs_regularTicketPreference <- list(
+  c("regularTicketPreference", "premiumTicketWillingness"),
+  c("regularTicketPreference", "urbanCinemaVisits"),
+  c("regularTicketPreference", "specialScreeningWillingness"),
+  c("regularTicketPreference", "monthlyEntertainmentBudget"),
+  c("regularTicketPreference", "weekdayPreference"),
+  c("regularTicketPreference", "weekendPreference")
+)
+
+# Grouping berdasarkan variabel "premiumTicketWillingness"
+pairs_premiumTicketWillingness <- list(
+  c("premiumTicketWillingness", "urbanCinemaVisits"),
+  c("premiumTicketWillingness", "specialScreeningWillingness"),
+  c("premiumTicketWillingness", "monthlyEntertainmentBudget"),
+  c("premiumTicketWillingness", "weekdayPreference"),
+  c("premiumTicketWillingness", "weekendPreference")
+)
+
+# Grouping berdasarkan variabel "urbanCinemaVisits"
+pairs_urbanCinemaVisits <- list(
+  c("urbanCinemaVisits", "specialScreeningWillingness"),
+  c("urbanCinemaVisits", "monthlyEntertainmentBudget"),
+  c("urbanCinemaVisits", "weekdayPreference"),
+  c("urbanCinemaVisits", "weekendPreference")
+)
+
+# Grouping berdasarkan variabel "specialScreeningWillingness"
+pairs_specialScreeningWillingness <- list(
+  c("specialScreeningWillingness", "monthlyEntertainmentBudget"),
+  c("specialScreeningWillingness", "weekdayPreference"),
+  c("specialScreeningWillingness", "weekendPreference")
+)
+
+# Grouping berdasarkan variabel "monthlyEntertainmentBudget"
+pairs_monthlyEntertainmentBudget <- list(
+  c("monthlyEntertainmentBudget", "weekdayPreference"),
+  c("monthlyEntertainmentBudget", "weekendPreference")
+)
+
+# Grouping berdasarkan variabel "weekdayPreference"
+pairs_weekdayPreference <- list(
+  c("weekdayPreference", "weekendPreference")
+)
+
+# Jalanin fungsi buat korelasi numerik per kelompok (udh di definisiin di atas)
+numerical_correlation_results_satisfaction <- spearman_numerical_correlation_manual(numerical_data, pairs_satisfaction)
+numerical_correlation_results_reasonablePricing <- spearman_numerical_correlation_manual(numerical_data, pairs_reasonablePricing)
+numerical_correlation_results_flexiblePricing <- spearman_numerical_correlation_manual(numerical_data, pairs_flexiblePricing)
+numerical_correlation_results_cinemaVisits3months <- spearman_numerical_correlation_manual(numerical_data, pairs_cinemaVisits3months)
+numerical_correlation_results_priceReductionVisit <- spearman_numerical_correlation_manual(numerical_data, pairs_priceReductionVisit)
+numerical_correlation_results_regularTicketPreference <- spearman_numerical_correlation_manual(numerical_data, pairs_regularTicketPreference)
+numerical_correlation_results_premiumTicketWillingness <- spearman_numerical_correlation_manual(numerical_data, pairs_premiumTicketWillingness)
+numerical_correlation_results_urbanCinemaVisits <- spearman_numerical_correlation_manual(numerical_data, pairs_urbanCinemaVisits)
+numerical_correlation_results_specialScreeningWillingness <- spearman_numerical_correlation_manual(numerical_data, pairs_specialScreeningWillingness)
+numerical_correlation_results_monthlyEntertainmentBudget <- spearman_numerical_correlation_manual(numerical_data, pairs_monthlyEntertainmentBudget)
+numerical_correlation_results_weekdayPreference <- spearman_numerical_correlation_manual(numerical_data, pairs_weekdayPreference)
+
+
+# Print hasil korelasi numerik uji Spearman per kelompoknya
+
+# Spearman correlation results for 'satisfaction' based correlations
+cat("\n\nSpearman correlation results for 'satisfaction' based correlations:\n")
+for (result_name in names(numerical_correlation_results_satisfaction)) {
+  var_names <- strsplit(result_name, "_")[[1]]  # Memisahkan nama variabel dengan "_"
+  cat("\nSpearman correlation between", var_names[1], "and", var_names[2], ":\n")
+  cat("rho =", numerical_correlation_results_satisfaction[[result_name]]$rho, "\n")
+  cat("p-value =", numerical_correlation_results_satisfaction[[result_name]]$p_value, "\n")
+  cat(numerical_correlation_results_satisfaction[[result_name]]$significant, "\n")
+}
+
+# Spearman correlation results for 'reasonablePricing' based correlations
+cat("\n\nSpearman correlation results for 'reasonablePricing' based correlations:\n")
+for (result_name in names(numerical_correlation_results_reasonablePricing)) {
+  var_names <- strsplit(result_name, "_")[[1]]
+  cat("\nSpearman correlation between", var_names[1], "and", var_names[2], ":\n")
+  cat("rho =", numerical_correlation_results_reasonablePricing[[result_name]]$rho, "\n")
+  cat("p-value =", numerical_correlation_results_reasonablePricing[[result_name]]$p_value, "\n")
+  cat(numerical_correlation_results_reasonablePricing[[result_name]]$significant, "\n")
+}
+
+# Spearman correlation results for 'flexiblePricing' based correlations
+cat("\n\nSpearman correlation results for 'flexiblePricing' based correlations:\n")
+for (result_name in names(numerical_correlation_results_flexiblePricing)) {
+  var_names <- strsplit(result_name, "_")[[1]]
+  cat("\nSpearman correlation between", var_names[1], "and", var_names[2], ":\n")
+  cat("rho =", numerical_correlation_results_flexiblePricing[[result_name]]$rho, "\n")
+  cat("p-value =", numerical_correlation_results_flexiblePricing[[result_name]]$p_value, "\n")
+  cat(numerical_correlation_results_flexiblePricing[[result_name]]$significant, "\n")
+}
+
+# Spearman correlation results for 'cinemaVisits3months' based correlations
+cat("\n\nSpearman correlation results for 'cinemaVisits3months' based correlations:\n")
+for (result_name in names(numerical_correlation_results_cinemaVisits3months)) {
+  var_names <- strsplit(result_name, "_")[[1]]
+  cat("\nSpearman correlation between", var_names[1], "and", var_names[2], ":\n")
+  cat("rho =", numerical_correlation_results_cinemaVisits3months[[result_name]]$rho, "\n")
+  cat("p-value =", numerical_correlation_results_cinemaVisits3months[[result_name]]$p_value, "\n")
+  cat(numerical_correlation_results_cinemaVisits3months[[result_name]]$significant, "\n")
+}
+
+# Spearman correlation results for 'priceReductionVisit' based correlations
+cat("\n\nSpearman correlation results for 'priceReductionVisit' based correlations:\n")
+for (result_name in names(numerical_correlation_results_priceReductionVisit)) {
+  var_names <- strsplit(result_name, "_")[[1]]
+  cat("\nSpearman correlation between", var_names[1], "and", var_names[2], ":\n")
+  cat("rho =", numerical_correlation_results_priceReductionVisit[[result_name]]$rho, "\n")
+  cat("p-value =", numerical_correlation_results_priceReductionVisit[[result_name]]$p_value, "\n")
+  cat(numerical_correlation_results_priceReductionVisit[[result_name]]$significant, "\n")
+}
+
+# Spearman correlation results for 'regularTicketPreference' based correlations
+cat("\n\nSpearman correlation results for 'regularTicketPreference' based correlations:\n")
+for (result_name in names(numerical_correlation_results_regularTicketPreference)) {
+  var_names <- strsplit(result_name, "_")[[1]]
+  cat("\nSpearman correlation between", var_names[1], "and", var_names[2], ":\n")
+  cat("rho =", numerical_correlation_results_regularTicketPreference[[result_name]]$rho, "\n")
+  cat("p-value =", numerical_correlation_results_regularTicketPreference[[result_name]]$p_value, "\n")
+  cat(numerical_correlation_results_regularTicketPreference[[result_name]]$significant, "\n")
+}
+
+# Spearman correlation results for 'premiumTicketWillingness' based correlations
+cat("\n\nSpearman correlation results for 'premiumTicketWillingness' based correlations:\n")
+for (result_name in names(numerical_correlation_results_premiumTicketWillingness)) {
+  var_names <- strsplit(result_name, "_")[[1]]
+  cat("\nSpearman correlation between", var_names[1], "and", var_names[2], ":\n")
+  cat("rho =", numerical_correlation_results_premiumTicketWillingness[[result_name]]$rho, "\n")
+  cat("p-value =", numerical_correlation_results_premiumTicketWillingness[[result_name]]$p_value, "\n")
+  cat(numerical_correlation_results_premiumTicketWillingness[[result_name]]$significant, "\n")
+}
+
+# Spearman correlation results for 'urbanCinemaVisits' based correlations
+cat("\n\nSpearman correlation results for 'urbanCinemaVisits' based correlations:\n")
+for (result_name in names(numerical_correlation_results_urbanCinemaVisits)) {
+  var_names <- strsplit(result_name, "_")[[1]]
+  cat("\nSpearman correlation between", var_names[1], "and", var_names[2], ":\n")
+  cat("rho =", numerical_correlation_results_urbanCinemaVisits[[result_name]]$rho, "\n")
+  cat("p-value =", numerical_correlation_results_urbanCinemaVisits[[result_name]]$p_value, "\n")
+  cat(numerical_correlation_results_urbanCinemaVisits[[result_name]]$significant, "\n")
+}
+
+# Spearman correlation results for 'specialScreeningWillingness' based correlations
+cat("\n\nSpearman correlation results for 'specialScreeningWillingness' based correlations:\n")
+for (result_name in names(numerical_correlation_results_specialScreeningWillingness)) {
+  var_names <- strsplit(result_name, "_")[[1]]
+  cat("\nSpearman correlation between", var_names[1], "and", var_names[2], ":\n")
+  cat("rho =", numerical_correlation_results_specialScreeningWillingness[[result_name]]$rho, "\n")
+  cat("p-value =", numerical_correlation_results_specialScreeningWillingness[[result_name]]$p_value, "\n")
+  cat(numerical_correlation_results_specialScreeningWillingness[[result_name]]$significant, "\n")
+}
+
+# Spearman correlation results for 'monthlyEntertainmentBudget' based correlations
+cat("\n\nSpearman correlation results for 'monthlyEntertainmentBudget' based correlations:\n")
+for (result_name in names(numerical_correlation_results_monthlyEntertainmentBudget)) {
+  var_names <- strsplit(result_name, "_")[[1]]
+  cat("\nSpearman correlation between", var_names[1], "and", var_names[2], ":\n")
+  cat("rho =", numerical_correlation_results_monthlyEntertainmentBudget[[result_name]]$rho, "\n")
+  cat("p-value =", numerical_correlation_results_monthlyEntertainmentBudget[[result_name]]$p_value, "\n")
+  cat(numerical_correlation_results_monthlyEntertainmentBudget[[result_name]]$significant, "\n")
+}
+
+# Spearman correlation results for 'weekdayPreference' based correlations
+cat("\n\nSpearman correlation results for 'weekdayPreference' based correlations:\n")
+for (result_name in names(numerical_correlation_results_weekdayPreference)) {
+  var_names <- strsplit(result_name, "_")[[1]]
+  cat("\nSpearman correlation between", var_names[1], "and", var_names[2], ":\n")
+  cat("rho =", numerical_correlation_results_weekdayPreference[[result_name]]$rho, "\n")
+  cat("p-value =", numerical_correlation_results_weekdayPreference[[result_name]]$p_value, "\n")
+  cat(numerical_correlation_results_weekdayPreference[[result_name]]$significant, "\n")
+}
+```
+#"satisfaction" vs "reasonablePricing"
+#"satisfaction" vs "flexiblePricing"
+#"satisfaction" vs "cinemaVisits3months"
+#"satisfaction" vs "priceReductionVisit"
+#"satisfaction" vs "regularTicketPreference"
+#"satisfaction" vs "premiumTicketWillingness"
+#"satisfaction" vs "urbanCinemaVisits"
+#"satisfaction" vs "specialScreeningWillingness"
+#"satisfaction" vs "monthlyEntertainmentBudget"
+#"satisfaction" vs "weekdayPreference"
+#"satisfaction" vs "weekendPreference"
+
+#"reasonablePricing" vs "flexiblePricing"
+#"reasonablePricing" vs "cinemaVisits3months"
+#"reasonablePricing" vs "priceReductionVisit"
+#"reasonablePricing" vs "regularTicketPreference"
+#"reasonablePricing" vs "premiumTicketWillingness"
+#"reasonablePricing" vs "urbanCinemaVisits"
+#"reasonablePricing" vs "specialScreeningWillingness"
+#"reasonablePricing" vs "monthlyEntertainmentBudget"
+#"reasonablePricing" vs "weekdayPreference"
+#"reasonablePricing" vs "weekendPreference"
+
+#"flexiblePricing" vs "cinemaVisits3months"
+#"flexiblePricing" vs "priceReductionVisit"
+#"flexiblePricing" vs "regularTicketPreference"
+#"flexiblePricing" vs "premiumTicketWillingness"
+#"flexiblePricing" vs "urbanCinemaVisits"
+#"flexiblePricing" vs "specialScreeningWillingness"
+#"flexiblePricing" vs "monthlyEntertainmentBudget"
+#"flexiblePricing" vs "weekdayPreference"
+#"flexiblePricing" vs "weekendPreference"
+
+#"cinemaVisits3months" vs "priceReductionVisit"
+#"cinemaVisits3months" vs "regularTicketPreference"
+#"cinemaVisits3months" vs "premiumTicketWillingness"
+#"cinemaVisits3months" vs "urbanCinemaVisits"
+#"cinemaVisits3months" vs "specialScreeningWillingness"
+#"cinemaVisits3months" vs "monthlyEntertainmentBudget"
+#"cinemaVisits3months" vs "weekdayPreference"
+#"cinemaVisits3months" vs "weekendPreference"
+
+#"priceReductionVisit" vs "regularTicketPreference"
+#"priceReductionVisit" vs "premiumTicketWillingness"
+#"priceReductionVisit" vs "urbanCinemaVisits"
+#"priceReductionVisit" vs "specialScreeningWillingness"
+#"priceReductionVisit" vs "monthlyEntertainmentBudget"
+#"priceReductionVisit" vs "weekdayPreference"
+#"priceReductionVisit" vs "weekendPreference"
+
+#"regularTicketPreference" vs "premiumTicketWillingness"
+#"regularTicketPreference" vs "urbanCinemaVisits"
+#"regularTicketPreference" vs "specialScreeningWillingness"
+#"regularTicketPreference" vs "monthlyEntertainmentBudget"
+#"regularTicketPreference" vs "weekdayPreference"
+#"regularTicketPreference" vs "weekendPreference"
+
+#"premiumTicketWillingness" vs "urbanCinemaVisits"
+#"premiumTicketWillingness" vs "specialScreeningWillingness"
+#"premiumTicketWillingness" vs "monthlyEntertainmentBudget"
+#"premiumTicketWillingness" vs "weekdayPreference"
+#"premiumTicketWillingness" vs "weekendPreference"
+
+#"urbanCinemaVisits" vs "specialScreeningWillingness"
+#"urbanCinemaVisits" vs "monthlyEntertainmentBudget"
+#"urbanCinemaVisits" vs "weekdayPreference"
+#"urbanCinemaVisits" vs "weekendPreference"
+
+#"specialScreeningWillingness" vs "monthlyEntertainmentBudget"
+#"specialScreeningWillingness" vs "weekdayPreference"
+#"specialScreeningWillingness" vs "weekendPreference"
+
+#"monthlyEntertainmentBudget" vs "weekdayPreference"
+#"monthlyEntertainmentBudget" vs "weekendPreference"
+
+#"weekdayPreference" vs "weekendPreference"
+
+
+```{r}
+# Uji Korelasi Spearman antara Variabel Kategorikal
+
+
+categorical_data <- data.frame(
+  budgetAllocation = rep(c("Less than Rp 100.000", "Rp 100.000-300.000", "Rp 300.000-500.000", "More than Rp 500.000"), length.out = 14),
+  cinemaLocation = rep(c("North Jakarta", "East Jakarta", "South Jakarta", "West Jakarta",
+                          "Central Jakarta", "Tangerang City", "South Tangerang", "Tangerang Regency"), length.out = 14),
+  weeklyCinemaVisits = rep(c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"), length.out = 14)
+)
+
+
+# Konversi variabel kategorikal ke faktor dengan level yang udah ditentukan (ordinal & nominal)
+
+# budgetAllocation: ordinal
+categorical_data$budgetAllocation <- factor(categorical_data$budgetAllocation, 
+                                            levels = c("Less than Rp 100.000", 
+                                                       "Rp 100.000-300.000", 
+                                                       "Rp 300.000-500.000", 
+                                                       "More than Rp 500.000"), 
+                                            ordered = TRUE)
+categorical_data$budgetAllocation <- as.numeric(categorical_data$budgetAllocation)
+
+
+# cinemaLocation: nominal
+categorical_data$cinemaLocation <- factor(categorical_data$cinemaLocation, 
+                                          levels = c("North Jakarta", "East Jakarta", "South Jakarta", "West Jakarta", 
+                                                     "Central Jakarta", "Tangerang City", "South Tangerang", "Tangerang Regency"))
+categorical_data$cinemaLocation <- as.numeric(categorical_data$cinemaLocation)
+
+
+# weeklyCinemaVisits: nominal (days of week)
+categorical_data$weeklyCinemaVisits <- factor(categorical_data$weeklyCinemaVisits, 
+                                               levels = c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"))
+categorical_data$weeklyCinemaVisits <- as.numeric(categorical_data$weeklyCinemaVisits)
+
+
+# Pastiin categorical_data tetap sebagai data.frame nya
+categorical_data <- as.data.frame(categorical_data)
+
+# Filter baris yang lengkap dan nilai finitenya
+valid_rows <- complete.cases(categorical_data) &
+              is.finite(categorical_data$budgetAllocation) &
+              is.finite(categorical_data$cinemaLocation) &
+              is.finite(categorical_data$weeklyCinemaVisits)
+
+cleaned_data <- categorical_data[valid_rows, ]
+
+# Fungsi buat hitung korelasi Spearman antar variabel kategorikal 
+spearman_categorical_correlation_manual <- function(categorical_data) {
+  results <- list()
+  
+  # Pasangan kolom untuk dihitung korelasinya
+  pairs <- list(
+    c("budgetAllocation", "weeklyCinemaVisits"),
+    c("budgetAllocation", "cinemaLocation"),
+    c("weeklyCinemaVisits", "cinemaLocation")
+  )
+  
+  for (pair in pairs) {
+    cat_col1 <- pair[1]
+    cat_col2 <- pair[2]
+    
+    clean_col1 <- as.numeric(categorical_data[[cat_col1]])
+    clean_col2 <- as.numeric(categorical_data[[cat_col2]])
+    
+    # Pastikan data valid, hapus NA dan Inf
+    valid_index <- !is.na(clean_col1) & !is.na(clean_col2) & is.finite(clean_col1) & is.finite(clean_col2)
+    clean_col1 <- clean_col1[valid_index]
+    clean_col2 <- clean_col2[valid_index]
+    
+    if (length(clean_col1) > 1 & length(clean_col2) > 1) {
+      spearman_result <- suppressWarnings(cor.test(clean_col1, clean_col2, method = "spearman"))
+      significant <- ifelse(spearman_result$p.value < 0.05, 
+                            "There is significant relationship", 
+                            "There is no significant relationship")
+      
+      results[[paste(cat_col1, cat_col2, sep = "_")]] <- list(
+        rho = spearman_result$estimate,
+        p_value = spearman_result$p.value,
+        significant = significant
+      )
+    } else {
+      results[[paste(cat_col1, cat_col2, sep = "_")]] <- list(
+        rho = NA,
+        p_value = NA,
+        significant = "Not enough data"
+      )
+    }
+  }
+  
+  return(results)
+}
+
+# Fungsi korelasi (data udah dibersihkan)
+categorical_correlation_results <- spearman_categorical_correlation_manual(cleaned_data)
+
+# Display atau print hasil korelasinya
+cat("\n\nSpearman correlation results between categorical variables:\n")
+for (result_name in names(categorical_correlation_results)) {
+  var_names <- strsplit(result_name, "_")[[1]]
+  
+  cat("\nSpearman correlation between", var_names[1], "and", var_names[2], ":\n")
+  cat("rho =", categorical_correlation_results[[result_name]]$rho, "\n")
+  cat("p-value =", categorical_correlation_results[[result_name]]$p_value, "\n")
+  cat(categorical_correlation_results[[result_name]]$significant, "\n")
+}
+```
+#"budgetAllocation" vs "weeklyCinemaVisits"
+#"budgetAllocation" vs "cinemaLocation"
+#"weeklyCinemaVisits" vs "cinemaLocation"
