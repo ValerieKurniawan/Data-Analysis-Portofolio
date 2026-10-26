@@ -22,7 +22,7 @@
 - Gunakan model ensemble learning ketika data memiliki banyak variabel dan hubungan non-linear
 - Linear Regression untuk kasus yang lebih sederhana
   
-Tools
+## Tools
 - GCP BigQuery ML
 - Kaggle
 
