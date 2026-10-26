@@ -14,3 +14,15 @@
 - Mayoritas variabel numerik seperti IPK dan durasi olahraga terbukti tidak terdistribusi secara normal sehingga memerlukan pendekatan statistik non-parametrik
 - Terdapat korelasi signifikan antara kebiasaan tidur dengan frekuensi olahraga dan fakultas dengan frekuensi olahraga yang menunjukkan pola perilaku mahasiswa
 - Instrumen kuesioner pada data survei memiliki nilai reliabilitas yang sangat rendah sehingga pertanyaan dinilai tidak konsisten 
+
+## Tools
+R Programming
+
+## Skills
+- Manipulasi Data: pembersihan dan pembacaan dataset menggunakan package readr
+- Pemetaan Variabel: data kategorikal dan numerik
+- Analisis Deskriptif:  mean, median, dan mode 
+- Visualisasi Data: package ggplot2
+- Uji Inferensial Kategorikal: Chi-Square Goodness of Fit dan Test of Independence
+- Uji Distribusi Probabilitas: Shapiro-Wilk test
+- Uji Reliabilitas Instrumen: Cronbach's Alpha
