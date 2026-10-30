@@ -13,7 +13,7 @@
 - Menerapkan analisis data mulai dari descriptive, predictive, hingga optimization untuk pengambilan keputusan strategis
 
 ## Insight
-- Sentralisasi data melalui Document Management System secara signifikan menghilangkan redundansi dan meningkatkan akurasi validasi data
+- Sentralisasi data untuk menghilangkan redundansi dan meningkatkan akurasi validasi data
 - Identifikasi cepat properti bernilai tinggi dan analisis rata-rata harga per wilayah untuk strategi pemasaran
 
 ## Recommendation
