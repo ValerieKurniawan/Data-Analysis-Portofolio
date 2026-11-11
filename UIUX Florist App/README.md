@@ -1,4 +1,5 @@
 # Petaluxe: Desain UI/UX Aplikasi Marketplace Florist
+https://www.figma.com/design/s3mxzmuPczs95YfhZNjjsn/Mobile-Apps-%E2%80%93-Prototyping-Kit--Community-?node-id=1204-9555&p=f
 
 ## Problem
 - Pasar florist di Indonesia masih terfragmentasi, banyak UMKM yang menerima pesanan lewat chat media sosial atau toko offline
