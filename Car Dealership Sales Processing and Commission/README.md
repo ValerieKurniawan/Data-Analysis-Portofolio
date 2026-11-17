@@ -1,4 +1,4 @@
-# Car Dealership Sales Processing and Commission Calculation (Excel)
+# Car Dealership Sales Processing and Commission Calculation
 Practice case with simulated data from a fictional dealer (Dravik Mobilari), March-May 2025
 
 ## Problem
